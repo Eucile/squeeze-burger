@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import AddForm from './AddForm';
 import Header from './Header';
+import Booking from './Booking'
 import Hero from './Hero';
 import Maps from './Maps';
 import MenuList from './MenuList';
-
 
 class App extends Component {
   constructor() {
@@ -42,6 +42,7 @@ class App extends Component {
         <Maps/>
         <MenuList/>
         </header>
+        <Booking/>
         <AddForm onNewAddress={this.handleNewAddress}/>
       </div>
     );
