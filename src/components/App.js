@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import AddForm from './AddForm';
 import Header from './Header';
-import Booking from './Booking'
-import Hero from './Hero';
-import Maps from './Maps';
-import MenuList from './MenuList';
+import Admin from './Admin';
+import Body from './Body';
+import Booking from './Booking';
+import Footer from './Footer';
 
 class App extends Component {
   constructor() {
@@ -36,14 +35,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
         <Header/>
-        <Hero/>
-        <Maps/>
-        <MenuList/>
-        </header>
+        <Admin/>
+        <Body/>
         <Booking/>
-        <AddForm onNewAddress={this.handleNewAddress}/>
+        <Footer/>
       </div>
     );
   }
