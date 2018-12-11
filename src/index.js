@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import middlewareLogger from './middleware/middleware-logger';
+import thunkMiddleware from 'redux-thunk';
 import { Provider } from 'react-redux';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import testReducer from './reducers/testReducer'
-import './index.css';
+import rootReducer from './reducers/index';
 import './index.css';
 import 'typeface-montserrat';
 
-const store = createStore(testReducer);
+const store = createStore(rootReducer, applyMiddleware(middlewareLogger, thunkMiddleware));
 
 ReactDOM.render (
   <Provider store={store}>

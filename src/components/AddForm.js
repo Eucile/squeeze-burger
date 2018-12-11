@@ -1,4 +1,6 @@
 import React from 'react';
+import { fetchAdminInput } from './../actions';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 function AddForm(props) {
@@ -8,8 +10,9 @@ function AddForm(props) {
   let _zipcode = null;
 
   function handleAddressSubmission(event) {
+    const { dispatch } = props;
     event.preventDefault();
-    props.onNewAddress(_streetAddress.value, _city.value, _state.value, _zipcode.value);
+    dispatch(fetchAdminInput(_streetAddress.value, _city.value, _state.value, _zipcode.value));
   };
 
   return(
@@ -42,7 +45,7 @@ function AddForm(props) {
 }
 
 AddForm.propTypes = {
-  onNewAddress: PropTypes.func
-}
+  dispatch: PropTypes.func
+};
 
-export default AddForm;
+export default connect()(AddForm);
