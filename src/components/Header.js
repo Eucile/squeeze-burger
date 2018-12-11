@@ -1,20 +1,21 @@
 import React from "react";
-import burgerMenu from './burgermenu.png';
-import '../assets/styles/Header.css';
-import orangeLogo from '../assets/logos/squeeze_logo_orange.png';
+import '../assets/styles/Header.scss';
+import whiteLogo from '../assets/logos/squeeze_logo_white.png';
+import burgerMenu from '../assets/logos/orange_burger_menu.png';
 
 function Header(){
   return (
     <div className="HeaderStyles">
-      <div className="header-content">
-        <img src={burgerMenu}/><img className="orange-logo" src={orangeLogo}/>
-        <ul>
+        <ul className="nav-list">
           <li className="nav-list">home</li>
           <li className="nav-list">menu</li>
           <li className="nav-list">locations</li>
           <li className="nav-list">story</li>
         </ul>
-      </div>
+        <div></div>
+        <div>
+          <button className="booking-button">book catering</button>
+        </div>
     </div>
   );
 }

@@ -1,0 +1,20 @@
+.slide2 {
+  margin-top: 6em;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  display: table;
+  background-attachment: fixed;
+    h1 {
+      border-bottom: 3px solid #DA6727;
+    }
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+

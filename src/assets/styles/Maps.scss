@@ -1,0 +1,34 @@
+.map-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.google-map-list {
+  width: 60%;
+  img {
+    width: 100%;
+  }
+}
+.social-sidebar {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  width: 450px;
+  img {
+    width: 40%;
+  }
+}
+.map-catering-button {
+  background-color: #DA6727;
+  color: white;
+  font-weight: bolder;
+  font-size: 15px;
+  padding: 15px 45px;
+  border-radius: 1px;
+  width: 360px;
+  &:hover {
+    background-color: black;
+    color: #DA6727;
+    transition: 0.7s;
+  }
+}

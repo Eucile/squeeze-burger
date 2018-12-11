@@ -1,0 +1,32 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.slide1 {
+  background-image: url('../img/meat.jpeg');
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  img {
+    width: 100%;
+  }
+}
+.hero-center {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.slide3 {
+  flex-direction: column;
+  background-image: url('../img/head_burger4.jpg');
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  display: table;
+  background-attachment: fixed;
+}
