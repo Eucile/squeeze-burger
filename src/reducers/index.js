@@ -1,8 +1,8 @@
-import theGoogsReducer from './theGoogsReducer';
+import adminInfoReducer from './adminInfoReducer';
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
-  theGoogsReducer: theGoogsReducer
+  adminInfoReducer: adminInfoReducer
 });
 
 export default rootReducer;

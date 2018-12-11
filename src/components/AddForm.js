@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchCoords } from './../actions';
+import { fetchAdminInput } from './../actions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -12,7 +12,7 @@ function AddForm(props) {
   function handleAddressSubmission(event) {
     const { dispatch } = props;
     event.preventDefault();
-    dispatch(fetchCoords(_streetAddress.value, _city.value, _state.value, _zipcode.value));
+    dispatch(fetchAdminInput(_streetAddress.value, _city.value, _state.value, _zipcode.value));
   };
 
   return(
