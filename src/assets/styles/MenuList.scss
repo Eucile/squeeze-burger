@@ -1,5 +1,7 @@
 .slide2 {
-  margin-top: 6em;
+  margin: 0;
+  background-image: url('../img/wood.jpeg');
+  margin-top: 7em;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -8,13 +10,37 @@
   display: table;
   background-attachment: fixed;
     h1 {
+      padding-bottom: 5px;
       border-bottom: 3px solid #DA6727;
     }
+    img {
+      max-width: 100%;
+    }
+}
+.menu-container {
+  box-shadow: -15px 0 15px -15px rgba(0,0,0, 1.5);
+  display: flex;
+  background: white;
+  padding-left: 7em;
+  padding-right: 7em;
+  justify-content: center;
+  width: 50%;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  .menu-title-flex {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.menu-container {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+@media only screen and (max-width: 800px) {
+  .social-sidebar {
+    display: none;
+  }
+  .menu-container {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
