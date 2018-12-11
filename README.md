@@ -2,6 +2,8 @@
 
 ## Description
 
+Squeeze Burger Truck is the best burger in California. This application tracks where the Squeeze Burger Truck is at and where it's heading. It also offers portals for an admin to create and edit event details. Customers can also request a custom event.
+
 ## Creative Process
 
 #### Hand Drawn Sketches:
