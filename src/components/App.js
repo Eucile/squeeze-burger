@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import Booking from './Booking'
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <Booking/>
       </div>
     );
   }
