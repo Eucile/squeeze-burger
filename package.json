@@ -3,12 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "google-maps-react": "^2.0.2",
     "node-sass": "^4.11.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+<<<<<<< HEAD
     "react-materialize": "^2.5.1",
+=======
+    "react-google-maps": "^9.4.5",
+    "react-redux": "^6.0.0",
+>>>>>>> 5ca62ce6a79ca968adaa46aac4c12968d9afa42d
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+<<<<<<< HEAD
+    "typeface-montserrat": "0.0.54"
+=======
+    "redux": "^4.0.1"
+>>>>>>> master
   },
   "scripts": {
     "start": "react-scripts start",
