@@ -9,15 +9,21 @@ function MenuList(){
       <div className="main-menu">
         <h1>Mains</h1>
           <div>
-            <h2>Burgers</h2>
+          <div className="menu-title-flex">
+            <h2>Burger</h2><h2> 8.00</h2>
+          </div>
             <p>lettuce tomato pickles onion mayo mustard.</p>
           </div>
           <div>
-            <h2>Hotdogs</h2>
+          <div className="menu-title-flex">
+            <h2>Hotdog</h2><h2> 7.00</h2>
+          </div>
             <p>lettuce tomatoes pickles onion mayo mustard relish</p>
           </div>
           <div>
-            <h2>Burgers</h2>
+            <div className="menu-title-flex">
+              <h2>Avocado Burger</h2><h2> 10.00</h2>
+            </div>
             <p>bacon mayo avocado onion lettuce tomatoes.</p>
           </div>
         </div>

@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-<<<<<<< HEAD
 import './index.css';
 import 'typeface-montserrat';
-=======
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
->>>>>>> master
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import testReducer from './reducers/testReducer'

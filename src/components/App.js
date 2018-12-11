@@ -4,6 +4,8 @@ import Header from './Header';
 import Hero from './Hero';
 import Maps from './Maps';
 import MenuList from './MenuList';
+import Footer from './Footer';
+
 
 
 class App extends Component {
@@ -35,14 +37,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="App">      
         <Header/>
         <Hero/>
         <Maps/>
         <MenuList/>
-        </header>
         <AddForm onNewAddress={this.handleNewAddress}/>
+        <Footer/>
       </div>
     );
   }
