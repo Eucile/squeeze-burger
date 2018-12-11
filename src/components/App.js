@@ -4,6 +4,7 @@ import Header from './Header';
 import Hero from './Hero';
 import Maps from './Maps';
 import MenuList from './MenuList';
+import Story from './Story';
 import Footer from './Footer';
 
 
@@ -43,6 +44,7 @@ class App extends Component {
         <Maps/>
         <MenuList/>
         <AddForm onNewAddress={this.handleNewAddress}/>
+        <Story />
         <Footer/>
       </div>
     );

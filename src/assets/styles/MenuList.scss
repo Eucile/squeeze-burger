@@ -1,5 +1,7 @@
 .slide2 {
-  margin-top: 6em;
+  margin: 0;
+  background-image: url('../img/wood.jpeg');
+  margin-top: 7em;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -16,11 +18,16 @@
     }
 }
 .menu-container {
+  box-shadow: -15px 0 15px -15px rgba(0,0,0, 1.5);
   display: flex;
+  background: white;
+  padding-left: 7em;
+  padding-right: 7em;
   justify-content: center;
-  width: 45%;
+  width: 50%;
   flex-direction: column;
   margin: 0 auto;
+  padding-bottom: 2em;
   .menu-title-flex {
     display: flex;
     justify-content: space-between;

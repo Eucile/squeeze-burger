@@ -36,9 +36,9 @@
 }
 
 .truck-icon {
-  margin-bottom: 1em;
   img {
     max-width: 100%;
+    padding: 3em 0em;
   }
 }
 .arrange-catering-button {
@@ -60,7 +60,7 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .social-sidebar {
     display: none;
   }

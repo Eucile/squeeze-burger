@@ -1,6 +1,7 @@
 import React from "react";
 import '../assets/styles/MenuList.scss';
 
+
 function MenuList(){
 
   return (
