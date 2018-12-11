@@ -1,12 +1,21 @@
 import React from 'react';
 import AddForm from './AddForm';
 import EditForm from './EditForm';
-import EventList from './EventList';
+import AdminEventList from './AdminEventList';
+import PropTypes from 'prop-types';
 
-function Admin() {
+function Admin(props) {
   return(
-    <div>Test</div>
+    <div>
+      <AdminEventList
+        addresses={props.addresses}
+      />
+    </div>
   );
+}
+
+Admin.propTypes = {
+  addresses: PropTypes.object
 }
 
 export default Admin;
