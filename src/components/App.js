@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AddForm from './AddForm';
+import Header from './Header';
 
 class App extends Component {
   constructor() {
@@ -32,6 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+        <Header/>
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>

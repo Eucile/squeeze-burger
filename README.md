@@ -1,44 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Squeeze Burger
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Squeeze Burger Truck is the best burger in California. This application tracks where the Squeeze Burger Truck is at and where it's heading. It also offers portals for an admin to create and edit event details. Customers can also request a custom event.
 
-### `npm start`
+## Creative Process
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Hand Drawn Sketches:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### Sketch Mock-ups:
 
-### `npm test`
+## Component Construction
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Install Instructions
 
-### `npm run build`
+#### From your desktop directory:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* `git clone https://github.com/bjrshea/squeeze-burger.git`
+* `cd folder_name`
+* `npm install`
+* `npm run start`
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Languages, libraries, & frameworks:
 
-### `npm run eject`
+* Git
+* HTML
+* Sass
+* JavaScript
+* React
+* Redux
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### APIs:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Google Maps
+* Firebase
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Tools or softwares:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Sketch
+Trello
 
-## Learn More
+## Links
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* [Squeeze Burger](http://www.squeezeburger.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Authors
+
+**AJ Mcgladdery**
+**Brendan Shea**
+**Hassan Al-Khalifah**
+**Krystal Foster**
