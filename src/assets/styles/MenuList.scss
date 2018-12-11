@@ -27,3 +27,13 @@
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .social-sidebar {
+    display: none;
+  }
+  .menu-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+

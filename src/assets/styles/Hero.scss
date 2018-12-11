@@ -17,11 +17,14 @@
   }
   .black-logo {
     max-width: 550px;
+    margin: 0 auto;
   }
 }
 .hero-center {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
-  width: 40%;
+  width: 100%;
 }
 
 .slide3 {
@@ -32,4 +35,15 @@
   width: 100%;
   display: table;
   background-attachment: fixed;
+}
+
+@media only screen and (max-width: 900px) {
+  .hero-center {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    img {  
+      width: 100%;
+    }
+  }
 }

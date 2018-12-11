@@ -22,7 +22,7 @@ function MenuList(){
           </div>
           <div>
             <div className="menu-title-flex">
-              <h2>Avocado Burger</h2><h2> 10.00</h2>
+              <h2>Chicken sandwich</h2><h2> 10.00</h2>
             </div>
             <p>bacon mayo avocado onion lettuce tomatoes.</p>
           </div>

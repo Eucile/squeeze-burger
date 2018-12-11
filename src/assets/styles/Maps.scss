@@ -1,6 +1,12 @@
 .map-container {
   margin: 0 auto;
   width: 100%;
+  .truck-icon {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2em 0;
+  }
 }
 .content-container {
   display: flex;
@@ -28,6 +34,13 @@
     width: 40%;
   }
 }
+
+.truck-icon {
+  margin-bottom: 1em;
+  img {
+    max-width: 100%;
+  }
+}
 .arrange-catering-button {
   display: flex;
   justify-content: center;
@@ -44,5 +57,19 @@
     background-color: black;
     color: #DA6727;
     transition: 0.7s;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .social-sidebar {
+    display: none;
+  }
+  .content-container {
+    width: 100%;
+    margin: 0 auto;
+    .google-map-list {
+      width: 100%;
+      padding: 0 10px;
+    }
   }
 }
