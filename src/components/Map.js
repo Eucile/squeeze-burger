@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import '../assets/styles/Maps.scss';
 import dummyMap from '../assets/img/dummymap.png';
 import insta1 from '../assets/img/insta1.png';
@@ -9,7 +10,7 @@ import insta5 from '../assets/img/insta5.png';
 
 
 
-function Maps(){
+function Map(props){
 
   return (
     <div className="map-container">
@@ -37,4 +38,9 @@ function Maps(){
   );
 }
 
-export default Maps;
+Map.propTypes = {
+  lat: PropTypes.string,
+  lng: PropTypes.string
+}
+
+export default Map;

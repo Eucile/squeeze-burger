@@ -10,7 +10,7 @@ const addresses = firebase.database().ref('addresses');
 export function fetchAdminInput(streetAddress, city, state, zipcode) {
   const addressConcat = streetAddress + city + state + zipcode;
   return function (dispatch) {
-    return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressConcat}&key=AIzaSyAhVPlN956j50euktiP88TXPgv7u2-_ljA`).then(
+    return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressConcat}&key=`).then(
       response => response.json(),
       error => console.log('An error occurred.', error)
     ).then(function(json) {

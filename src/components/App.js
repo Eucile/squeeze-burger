@@ -5,24 +5,42 @@ import Body from './Body';
 import Booking from './Booking';
 import Footer from './Footer';
 import AddForm from './AddForm';
+import TestGoogleAPI from './TestGoogleAPI';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
       <div className="App">
         <Header/>
-        <Admin/>
-        <Body/>
+        <Admin
+          addresses={this.props.mapStateToProps}
+        />
+        <Body
+          addresses={this.props.mapStateToProps}
+        />
         <Booking/>
         <Footer/>
         <AddForm/>
+        <TestGoogleAPI/>
       </div>
     );
   }
+};
+
+App.propTypes = {
+  addresses: PropTypes.object
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    addresses: state.addresses
+  };
+};
+
+export default connect(mapStateToProps)(App);
