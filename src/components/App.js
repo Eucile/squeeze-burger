@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import AddForm from './AddForm';
 import Header from './Header';
-<<<<<<< HEAD
 import Booking from './Booking'
-=======
 import Hero from './Hero';
 import Maps from './Maps';
 import MenuList from './MenuList';
-
->>>>>>> 5ca62ce6a79ca968adaa46aac4c12968d9afa42d
 
 class App extends Component {
   constructor() {
@@ -46,11 +42,8 @@ class App extends Component {
         <Maps/>
         <MenuList/>
         </header>
-<<<<<<< HEAD
         <Booking/>
-=======
         <AddForm onNewAddress={this.handleNewAddress}/>
->>>>>>> 5ca62ce6a79ca968adaa46aac4c12968d9afa42d
       </div>
     );
   }
