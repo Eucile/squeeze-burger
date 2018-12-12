@@ -5,7 +5,6 @@ import Body from './Body';
 import Booking from './Booking';
 import Footer from './Footer';
 import AddForm from './AddForm';
-import TestGoogleAPI from './TestGoogleAPI';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actions from './../actions';
@@ -34,7 +33,6 @@ class App extends Component {
         <Booking/>
         <Footer/>
         <AddForm/>
-        <TestGoogleAPI/>
       </div>
     );
   }
