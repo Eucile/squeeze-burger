@@ -8,7 +8,6 @@ export default (state = {}, action) => {
       newState = Object.assign({}, state);
       newState[action.address.id] = action.address;
       return newState;
-
     default:
       return state;
   }
