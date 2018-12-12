@@ -12,9 +12,11 @@ function Booking(){
       <label>Date Of Event</label>
       <input name='date' type='date' label="Date of your event" onChange={function(e, value) {}} />
       <br/>
-      <label>Hours</label>
-      <input name="from" placeholder="from" label="Time Range" />
-      <input name="to" placeholder="to" />
+      <label>Approx. from  </label>
+
+      <input type="time" name="from" placeholder="from" label="Time Range" />
+      <span>  to  </span>
+      <input type="time" name="to" placeholder="to" />
       <br/>
       <label>Location</label>
       <input name="location" label="Location"/>
