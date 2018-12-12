@@ -5,17 +5,13 @@ import { connect } from 'react-redux';
 function AdminEvent({ onChangingSelectedEditEvent, streetAddress, state, city, zipcode, date, timeOpen, timeClosed, eventId }) {
 
   return(
-    <div>
+    <div id={eventId}>
       <p>{streetAddress}</p>
       <p>{city}, {state} {zipcode}</p>
-      <p>DATE GOES HERE</p>
-      <p>TIMEOPEN GOES HERE</p>
-      <p>TIMECLOSE GOES HERE</p>
       <button
         onClick={() => {
           onChangingSelectedEditEvent(eventId);
-        }}
-      >Edit Button</button>
+        }}>Edit Button</button>
     </div>
   );
 }

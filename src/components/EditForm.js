@@ -1,5 +1,5 @@
 import React from 'react';
-import { editSelectedAddress } from './../actions';
+import { editSelectedAddress, deleteSelectedAddress } from './../actions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -23,9 +23,15 @@ function EditForm(props) {
     dispatch(editSelectedAddress(props.selectedEditEvent, _streetAddress.value, _city.value, _addressState.value, _zipcode.value));
   };
 
+  function handleDeleteAddressSubmission(event) {
+    const { dispatch } = props;
+    event.preventDefault();
+    dispatch(deleteSelectedAddress(props.selectedEditEvent));
+  };
+
   return(
     <div>
-      <form onSubmit={handleEditAddressSubmission}>
+      <form>
         <input
           placeholder='Street Address'
           type='text'
@@ -58,7 +64,8 @@ function EditForm(props) {
           value={props.zipcodeInput}
           ref={(input) => {_zipcode = input;}}
         />
-        <button type='submit'>Submit</button>
+        <button onClick={handleEditAddressSubmission}>Submit</button>
+        <button onClick={handleDeleteAddressSubmission}>Delete</button>
       </form>
     </div>
   );

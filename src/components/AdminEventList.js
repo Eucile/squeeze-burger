@@ -15,7 +15,7 @@ function AdminEventList({ addresses, onChangingSelectedEditEvent }) {
           zipcode={addressEvent.zipcode}
           date={addressEvent.date}
           timeOpen={addressEvent.timeOpen}
-          timeClosed={addressEvent.timeClosed}
+          timeClose={addressEvent.timeClose}
           eventId={addressEventId}/>
       })}
     </div>
