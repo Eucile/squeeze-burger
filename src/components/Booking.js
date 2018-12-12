@@ -11,7 +11,7 @@ function Booking(){
     <Row>
       <Col s={12}>
         <div className="container">
-          <form action="mailto:amcgladd@gmail.com" method="POST" enctype="text/plain">
+          <form action="mailto:amcgladd@gmail.com" method="POST" encType="text/plain">
             <Row>
               <h5>About Your Event</h5>
               <Input s={12} type='select' label="Event Type" defaultValue='2' name="Event Type:">

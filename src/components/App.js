@@ -4,30 +4,51 @@ import Admin from './Admin';
 import Body from './Body';
 import Booking from './Booking';
 import Footer from './Footer';
-import AddForm from './AddForm';
-import TestGoogleAPI from './TestGoogleAPI';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import * as actions from './../actions';
+import { Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
     super(props);
   }
 
+  componentWillMount() {
+    const { dispatch } = this.props;
+    const { watchFirebaseAddressesRef } = actions;
+    dispatch(watchFirebaseAddressesRef());
+  }
+
   render() {
     return (
       <div className="App">
         <Header/>
-        <Admin
-          addresses={this.props.mapStateToProps}
-        />
-        <Body
-          addresses={this.props.mapStateToProps}
-        />
-        <Booking/>
+        <Switch>
+          <Route
+            exact path='/'
+            render={ () =>
+              <Body
+                addresses={this.props.addresses}
+              />
+            }
+          />
+          <Route
+            exact path='/admin'
+            render={ () =>
+              <Admin
+                addresses={this.props.addresses}
+              />
+            }
+          />
+          <Route
+            exact path='/Booking'
+            render={ () =>
+              <Booking/>
+            }
+          />
+        </Switch>
         <Footer/>
-        <AddForm/>
-        <TestGoogleAPI/>
       </div>
     );
   }

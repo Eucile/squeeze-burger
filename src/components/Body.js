@@ -6,11 +6,11 @@ import Social from './Social';
 import Story from './Story';
 import PropTypes from 'prop-types';
 
-function Body(props) {
+function Body({ addresses }) {
   return(
     <div>
       <EventList
-        addresses={props.addresses}
+        addresses={addresses}
       />
     </div>
   );
