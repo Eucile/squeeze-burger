@@ -2,15 +2,14 @@ import React from 'react';
 import Event from './Event';
 import PropTypes from 'prop-types';
 
-function EventList(props) {
+function EventList({ addresses }) {
   return(
     <div>
-      {Object.keys(props.addresses).map(function(eventId) {
-        var event = props.addresses[eventId];
-        console.log(event);
+      {Object.keys(addresses).map(function(eventId) {
+        var event = addresses[eventId];
         return <Event key={eventId}
-          test={event}
           streetAddress={event.streetAddress}
+          state={event.state}
           city={event.city}
           zipcode={event.zipcode}
           date={event.date}

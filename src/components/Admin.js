@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 function Admin(props) {
   return(
     <div>
+      <AddForm />
       <AdminEventList
         addresses={props.addresses}
       />

@@ -9,17 +9,20 @@ import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
 import './index.css';
 import 'typeface-montserrat';
+import { HashRouter } from 'react-router-dom';
 
 const store = createStore(rootReducer, applyMiddleware(middlewareLogger, thunkMiddleware));
 
-let unsubscribe = store.subscribe(() =>
-  console.log(store.getState())
-);
+// let unsubscribe = store.subscribe(() =>
+//   console.log(store.getState())
+// );
 
 ReactDOM.render (
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <HashRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </HashRouter>,
   document.getElementById('root')
 );
 
