@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
 import './index.css';
 import 'typeface-montserrat';
+import { HashRouter } from 'react-router-dom';
 
 const store = createStore(rootReducer, applyMiddleware(middlewareLogger, thunkMiddleware));
 
@@ -17,9 +18,11 @@ const store = createStore(rootReducer, applyMiddleware(middlewareLogger, thunkMi
 // );
 
 ReactDOM.render (
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <HashRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </HashRouter>,
   document.getElementById('root')
 );
 
