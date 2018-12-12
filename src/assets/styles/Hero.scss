@@ -4,7 +4,7 @@
   overflow: hidden;
 }
 .slide1 {
-  background-image: url('../img/meat.jpeg');
+  background: linear-gradient( rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2) ),url('../img/meat.jpeg');
   height: 100vh;
   display: flex;
   justify-content: center;
