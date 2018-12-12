@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function AdminEvent(props) {
   return(
     <div>
-      // KRYSTAL!!!!!! Event info goes here
+      
     </div>
   );
 }
