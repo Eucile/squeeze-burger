@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchAdminInput } from './../actions';
+import { editSelectedAddress } from './../actions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -20,7 +20,7 @@ function EditForm(props) {
   function handleEditAddressSubmission(event) {
     const { dispatch } = props;
     event.preventDefault();
-    // dispatch(fetchAdminInput(_streetAddress.value, _city.value, _addressState.value, _zipcode.value));
+    dispatch(editSelectedAddress(props.selectedEditEvent, _streetAddress.value, _city.value, _addressState.value, _zipcode.value));
   };
 
   return(
