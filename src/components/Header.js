@@ -12,7 +12,7 @@ function Header(){
           <li className="nav-list">menu</li>
           <li className="nav-list">locations</li>
           <li className="nav-list">story</li>
-          <li className="nav-list"><Link to="/login">log in</Link></li>
+          <li className="nav-list"><Link to="/login" style={{ color: '#FFF', textDecoration: 'none' }}>log in</Link></li>
         </ul>
         <div></div>
         <div>
