@@ -17,7 +17,7 @@ function Event({ streetAddress, state, city, zipcode, date, timeOpen, timeClose,
     </div>
   );
 }
-src/components/
+
 Event.propTypes = {
   streetAddress: PropTypes.string,
   addressState: PropTypes.string,
