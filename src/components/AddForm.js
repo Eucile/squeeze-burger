@@ -15,8 +15,9 @@ function AddForm(props) {
   function handleAddressSubmission(event) {
     const { dispatch } = props;
     event.preventDefault();
-    dispatch(fetchAdminInput(_streetAddress.value, _city.value, _addressState.value, _zipcode.value, _date.value, _timeOpen.value, _timeClose.value));
-    console.log(_date.value, _timeOpen.value, _timeClose.value)
+    const day = new Date(_date.value);
+    const dayOfWeek = day.getDay();
+    dispatch(fetchAdminInput(_streetAddress.value, _city.value, _addressState.value, _zipcode.value, _date.value, _timeOpen.value, _timeClose.value, dayOfWeek));
   };
 
   return(
