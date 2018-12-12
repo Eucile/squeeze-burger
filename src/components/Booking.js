@@ -1,27 +1,57 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Header from './Header';
-import { Input, Row, Option, Icon, Button, Col} from 'react-materialize';
 import '../assets/styles/Booking.scss';
 
-
 function Booking(){
+
+  function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onClick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+
   return (
     <form id="contact-form">
-           <input type="hidden" name="contact_number"/>
-           <label>Name</label>
-           <input type="text" name="user_name"/>
-           <label>Email</label>
-           <input type="email" name="user_email"/>
-           <label>Message</label>
-           <textarea name="contact"></textarea>
-           <input type="submit" value="Send"/>
-       </form>
+      <label>About Your Event</label>
+        <div className="dropdown">
+          <button onClick={myFunction} className="dropbtn">Dropdown</button>
+          <div id="myDropdown" className="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+       <input type="hidden" name="contact_number"/>
+       <label>Name</label>
+       <input type="text" name="user_name"/>
+       <label>Email</label>
+       <input type="email" name="user_email"/>
+       <label>Message</label>
+       <textarea name="contact"></textarea>
+       <input type="submit" value="Send"/>
+      </form>
   );
 }
 
+
+
 export default Booking;
+
 
 
 
