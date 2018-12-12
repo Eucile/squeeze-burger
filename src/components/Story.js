@@ -7,7 +7,7 @@ import story from  '../assets/logos/OUR STORY_orange.png';
 function Story(){
 
   return (
-    <div className="slide3">
+    <div>
       <div className="story-container">
         <div className="our-story-text">
         <div className="our-story-header-overlay"><img src={story}/></div>
