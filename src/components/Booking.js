@@ -6,7 +6,7 @@ import '../assets/styles/Booking.scss';
 function Booking(){
 
   return (
-    <form id="contact-form">
+    <form id="contact-form" className="container">
       <label>Date Of Event</label>
       <input name='date' type='date' label="Date of your event" onChange={function(e, value) {}} />
       <br/>
