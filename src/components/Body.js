@@ -2,16 +2,24 @@ import React from 'react';
 import Carousel from './Carousel';
 import EventList from './EventList';
 import MenuList from './MenuList';
-import Social from './Social';
+import Hero from './Hero';
+import Maps from './Maps';
 import Story from './Story';
+import Social from './Social';
 import PropTypes from 'prop-types';
+import AddForm from './AddForm';
+import AdminLogIn from './AdminLogIn';
 
 function Body({ addresses }) {
   return(
     <div>
-      <EventList
-        addresses={addresses}
-      />
+    <Hero/>
+    <Maps/>
+    <EventList
+      addresses={addresses}
+    />
+    <MenuList/>
+    <Story />
     </div>
   );
 }

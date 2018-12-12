@@ -1,0 +1,25 @@
+.FooterStyles {
+  background: black;
+  color: white;
+  display: flex;
+  font-size: 16px;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 1em;
+  .icon-list {
+    display: flex;
+    flex-direction: row;
+  }
+  li {
+    list-style: none;
+    padding: 0 30px;
+    img {
+      width: 80%;
+      height: 100%;
+    }
+    &:hover {
+      opacity: .7;
+      transition: 0.7s;
+    }
+  }
+}
