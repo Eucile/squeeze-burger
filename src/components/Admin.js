@@ -20,7 +20,6 @@ class Admin extends React.Component {
   }
 
   handleChangingSelectedEditEvent(selectedEventId) {
-    console.log(this.props.addresses[selectedEventId]);
     this.setState({
       selectedEditEvent: selectedEventId,
       streetAddressInput: this.props.addresses[selectedEventId].streetAddress,
