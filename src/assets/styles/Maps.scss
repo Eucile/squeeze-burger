@@ -8,6 +8,11 @@
     padding: 2em 0;
   }
 }
+
+.white-truck {
+  width: 93px;
+  height:68px;
+}
 .content-container {
   display: flex;
   justify-content: space-between;
@@ -35,14 +40,17 @@
   }
 }
 
-.truck-icon {
-  background-color: black;
-  margin: 0;
+.schedule-banner {
+  display: flex;
+  justify-content: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
   img {
-    max-width: 100%;
-    padding: 3em 0em;
+    width: 200px;
+    height: 68px;
   }
 }
+
 .arrange-catering-button {
   display: flex;
   justify-content: center;

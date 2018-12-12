@@ -5,6 +5,7 @@ import Hero from './Hero';
 import Maps from './Maps';
 import MenuList from './MenuList';
 import Story from './Story';
+import CarouselDivider from './CarouselDivider';
 import Footer from './Footer';
 
 

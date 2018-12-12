@@ -33,6 +33,16 @@
     justify-content: space-between;
   }
 }
+.menu-banner {
+  background: black;
+  display: flex;
+  justify-content: center;
+  padding-top: 5em;
+  img {
+    width: 450px;
+    height: 100px;
+  }
+}
 
 @media only screen and (max-width: 800px) {
   .social-sidebar {
