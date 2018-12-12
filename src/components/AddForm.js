@@ -2,6 +2,7 @@ import React from 'react';
 import { fetchAdminInput } from './../actions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import '../assets/styles/AddForm.scss';
 
 function AddForm(props) {
   let _streetAddress = null;
@@ -16,7 +17,7 @@ function AddForm(props) {
   };
 
   return(
-    <div>
+    <div className="add-form">
       <form onSubmit={handleAddressSubmission}>
         <input
           placeholder='Street Address'

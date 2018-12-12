@@ -8,6 +8,7 @@ import Story from './Story';
 import Social from './Social';
 import PropTypes from 'prop-types';
 import AddForm from './AddForm';
+import AdminLogIn from './AdminLogIn';
 
 function Body({ addresses }) {
   return(

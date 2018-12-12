@@ -8,6 +8,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actions from './../actions';
 import { Switch, Route } from 'react-router-dom';
+import AddForm from './AddForm';
+import AdminLogIn from './AdminLogIn';
 
 class App extends Component {
   constructor(props) {
@@ -32,6 +34,13 @@ class App extends Component {
                 addresses={this.props.addresses}
               />
             }
+          />
+          <Route
+          exact path='/login'
+          render={ () =>
+            <AdminLogIn
+            />
+          }
           />
           <Route
             exact path='/admin'

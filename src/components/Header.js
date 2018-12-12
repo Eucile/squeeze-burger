@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import '../assets/styles/Header.scss';
 import whiteLogo from '../assets/logos/squeeze_logo_white.png';
 import burgerMenu from '../assets/logos/orange_burger_menu.png';
@@ -11,6 +12,7 @@ function Header(){
           <li className="nav-list">menu</li>
           <li className="nav-list">locations</li>
           <li className="nav-list">story</li>
+          <li className="nav-list"><Link to="/login">log in</Link></li>
         </ul>
         <div></div>
         <div>
