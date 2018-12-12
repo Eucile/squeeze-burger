@@ -16,7 +16,7 @@ Squeeze Burger Truck is the best burger in California. This application tracks w
 
 #### From your desktop directory:
 
-* `git clone https://github.com/bjrshea/squeeze-burger.git`
+* `git clone https://github.com/Eucile/squeeze-burger.git`
 * `cd folder_name`
 * `npm install`
 * `npm run start`
@@ -39,8 +39,8 @@ Squeeze Burger Truck is the best burger in California. This application tracks w
 
 ### Tools or softwares:
 
-Sketch
-Trello
+* Sketch
+* Trello
 
 ## Links
 
@@ -48,7 +48,7 @@ Trello
 
 ## Authors
 
-**AJ Mcgladdery**
-**Brendan Shea**
-**Hassan Al-Khalifah**
-**Krystal Foster**
+* **AJ Mcgladdery**
+* **Brendan Shea**
+* **Hassan Al-Khalifah**
+* **Krystal Foster**

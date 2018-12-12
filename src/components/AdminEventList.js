@@ -10,7 +10,7 @@ function AdminEventList({ addresses, onChangingSelectedEditEvent }) {
         return <AdminEvent key={addressEventId}
           onChangingSelectedEditEvent={onChangingSelectedEditEvent}
           streetAddress={addressEvent.streetAddress}
-          state={addressEvent.state}
+          addressState={addressEvent.addressState}
           city={addressEvent.city}
           zipcode={addressEvent.zipcode}
           date={addressEvent.date}
