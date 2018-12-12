@@ -6,6 +6,16 @@
   display: flex;
   justify-content: center;
   flex-direction:column;
+  .truck-icon {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2em 0;
+  }
+}
+.content-container {
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   width: 80%;
 }
@@ -13,6 +23,8 @@
   width: 70%;
   margin: 4em auto;
   margin-bottom: 0;
+  width: 60%;
+  padding-right: 3em;
   img {
     width: 100%;
   }
@@ -29,6 +41,11 @@
     margin: 0 auto;
     border-bottom: solid 2px #cccccc;
     padding-bottom: 2em;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 450px;
+  .social-flex {
+    width: 450px;
   }
   img {
     margin: 0 auto;
@@ -36,7 +53,15 @@
     height: 68px;
   }
 }
-
+}
+.truck-icon {
+  background-color: black;
+  margin: 0;
+  img {
+    max-width: 100%;
+    padding: 3em 0em;
+  }
+}
 .arrange-catering-button {
   display: flex;
   justify-content: center;
@@ -52,6 +77,8 @@
   font-size: 15px;
   padding: 13px 65px;
   border-radius: 25px;
+  padding: 15px 45px;
+  border-radius: 1px;
   &:hover {
     background-color: black;
     color: #DA6727;

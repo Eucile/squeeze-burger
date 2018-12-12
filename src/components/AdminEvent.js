@@ -1,8 +1,7 @@
 import React from 'react';
-import GoogleMap from './GoogleMap';
 import PropTypes from 'prop-types';
 
-function Event({ streetAddress, state, city, zipcode, date, timeOpen, timeClosed, lat, lng }) {
+function AdminEvent({ streetAddress, state, city, zipcode, date, timeOpen, timeClosed }) {
   return(
     <div>
       <p>{streetAddress}</p>
@@ -10,24 +9,18 @@ function Event({ streetAddress, state, city, zipcode, date, timeOpen, timeClosed
       <p>DATE GOES HERE</p>
       <p>TIMEOPEN GOES HERE</p>
       <p>TIMECLOSE GOES HERE</p>
-      <GoogleMap
-        lat={lat}
-        lng={lng}
-      />
     </div>
   );
 }
 
-Event.propTypes = {
+AdminEvent.propTypes = {
   streetAddress: PropTypes.string,
-  addressState: PropTypes.string,
   city: PropTypes.string,
-  zipCode: PropTypes.string,
+  state: PropTypes.string,
+  zipcode: PropTypes.string,
   date: PropTypes.string,
   timeOpen: PropTypes.string,
-  timeClosed: PropTypes.string,
-  lat: PropTypes.number,
-  lng: PropTypes.number
+  timeClose: PropTypes.string
 }
 
-export default Event;
+export default AdminEvent;

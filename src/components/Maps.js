@@ -16,11 +16,6 @@ function Maps(){
         <div className="arrange-catering-button">
           <button className="map-catering-button">book catering</button>
         </div> 
-        <div className="google-map-list">
-          <div><img src={dummyMap}/></div>
-          <div><img src={dummyMap}/></div>
-          <div><img src={dummyMap}/></div>
-        </div> 
       </div>
     </div>
   );

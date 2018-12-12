@@ -1,55 +1,67 @@
 import React, { Component } from 'react';
-import AddForm from './AddForm';
 import Header from './Header';
-import Hero from './Hero';
-import Maps from './Maps';
-import MenuList from './MenuList';
-import Story from './Story';
-import CarouselDivider from './CarouselDivider';
+import Admin from './Admin';
+import Body from './Body';
+import Booking from './Booking';
 import Footer from './Footer';
-
-
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import * as actions from './../actions';
+import { Switch, Route } from 'react-router-dom';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      latitude: null,
-      longitude: null
-    }
-    this.handleNewAddress = this.handleNewAddress.bind(this);
+  constructor(props) {
+    super(props);
   }
 
-  handleNewAddress(streetAddress, city, state, zip) {
-    const addressConcat = streetAddress + city + state + zip;
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressConcat}&key=AIzaSyC45taHipsUXKJ0Pi76aupQGoe8qGNeUmI`).then(
-      response => response.json(),
-      error => console.log('An error occurred.', error)
-    ).then((json) => {
-      this.setState({
-        latitude: json.results[0].geometry.lat,
-        longitude: json.results[0].geometry.lng
-      })
-      console.log(this.state);
-      console.log('CHECK OUT THIS SWEET API:', json)
-    }, () => {
-      console.log('hi')
-    });
+  componentWillMount() {
+    const { dispatch } = this.props;
+    const { watchFirebaseAddressesRef } = actions;
+    dispatch(watchFirebaseAddressesRef());
   }
 
   render() {
     return (
-      <div className="App">      
+      <div className="App">
         <Header/>
-        <Hero/>
-        <Maps/>
-        <MenuList/>
-        <AddForm onNewAddress={this.handleNewAddress}/>
-        <Story />
+        <Switch>
+          <Route
+            exact path='/'
+            render={ () =>
+              <Body
+                addresses={this.props.addresses}
+              />
+            }
+          />
+          <Route
+            exact path='/admin'
+            render={ () =>
+              <Admin
+                addresses={this.props.addresses}
+              />
+            }
+          />
+          <Route
+            exact path='/Booking'
+            render={ () =>
+              <Booking/>
+            }
+          />
+        </Switch>
         <Footer/>
       </div>
     );
   }
+};
+
+App.propTypes = {
+  addresses: PropTypes.object
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    addresses: state.addresses
+  };
+};
+
+export default connect(mapStateToProps)(App);

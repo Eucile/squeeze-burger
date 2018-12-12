@@ -13,9 +13,14 @@
     padding-left: 5px;
   }
     h1 {
-      padding-top: 1em; 
+      padding-top: 1em;
       padding-bottom: 5px;
       border-bottom: 4px solid #DA6727;
+    }
+    img {
+      max-width: 100%;
+      padding-bottom: 5px;
+      border-bottom: 3px solid #DA6727;
     }
     img {
       max-width: 100%;
@@ -33,6 +38,13 @@
   flex-direction: column;
   margin: 0px auto;
   padding-bottom: 60px;
+  padding-left: 7em;
+  padding-right: 7em;
+  justify-content: center;
+  width: 50%;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-bottom: 2em;
   .menu-title-flex {
     display: flex;
     justify-content: space-between;
@@ -72,4 +84,3 @@
     margin: 0 auto;
   }
 }
-

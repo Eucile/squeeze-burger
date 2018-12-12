@@ -2,7 +2,6 @@ import React from "react";
 import '../assets/styles/MenuList.scss';
 import menu from '../assets/logos/MENU.png';
 
-
 function MenuList(){
 
   return (

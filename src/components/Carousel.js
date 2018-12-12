@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Social() {
+function Carousel() {
   return(
     <div>Test</div>
   );
 }
 
-export default Social;
+export default Carousel;
