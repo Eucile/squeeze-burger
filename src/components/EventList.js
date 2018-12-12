@@ -14,7 +14,7 @@ function EventList({ addresses }) {
           zipcode={event.zipcode}
           date={event.date}
           timeOpen={event.timeOpen}
-          timeClosed={event.timeClosed}
+          timeClose={event.timeClose}
           lat={event.lat}
           lng={event.lng}/>
       })}

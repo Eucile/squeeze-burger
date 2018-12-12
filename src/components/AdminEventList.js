@@ -14,7 +14,7 @@ function AdminEventList({ addresses }) {
           zipcode={addressEvent.zipcode}
           date={addressEvent.date}
           timeOpen={addressEvent.timeOpen}
-          timeClosed={addressEvent.timeClosed}/>
+          timeClose={addressEvent.timeClose}/>
       })}
     </div>
   );

@@ -8,7 +8,7 @@ firebase.initializeApp(firebaseConfig);
 const addresses = firebase.database().ref('addresses');
 /*eslint-enable */
 
-export function fetchAdminInput(streetAddress, city, addresState, zipcode) {
+export function fetchAdminInput(streetAddress, city, addresState, zipcode, date, timeOpen, timeClose) {
   const addressConcat = streetAddress + city + addresState + zipcode;
   return function (dispatch) {
     return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressConcat}&key=${googleMapAPIKey}`).then(
@@ -20,6 +20,9 @@ export function fetchAdminInput(streetAddress, city, addresState, zipcode) {
         city: city,
         addresState: addresState,
         zipcode: zipcode,
+        date: date,
+        timeOpen: timeOpen,
+        timeClose: timeClose,
         lat: json.results[0].geometry.location.lat,
         lng: json.results[0].geometry.location.lng
       });
