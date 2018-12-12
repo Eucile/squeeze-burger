@@ -28,19 +28,22 @@
   flex-direction: column;
   margin: 0 auto;
   padding-bottom: 2em;
+  h1 {
+    padding-top: 2em; 
+  }
   .menu-title-flex {
     display: flex;
     justify-content: space-between;
   }
 }
 .menu-banner {
-  background: black;
   display: flex;
   justify-content: center;
-  padding-top: 5em;
+  padding-top: 3em;
+  padding-bottom: 3em;
   img {
-    width: 450px;
-    height: 100px;
+    width: 119px;
+    height: 68px;
   }
 }
 

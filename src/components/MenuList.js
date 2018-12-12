@@ -8,7 +8,7 @@ function MenuList(){
   return (
     <div className="slide2">
     <div className="menu-banner">
-    
+      <img src={menu}/>
     </div>
     <div className="menu-container">
       <div className="main-menu">

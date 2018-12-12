@@ -13,30 +13,18 @@ function Maps(){
 
   return (
     <div className="map-container">
-    <div className="schedule-banner">
-      <img src={schedule}/>
-    </div>
-    <div className="content-container">
-      <div className="google-map-list">
-        <div><img src={dummyMap}/></div>
-        <div><img src={dummyMap}/></div>
-        <div><img src={dummyMap}/></div>
+      <div className="schedule-banner">
+        <img src={schedule}/>
       </div>
-      <div className="social-sidebar">
-      <div className="arrange-catering-button">
-        <button className="map-catering-button">book catering</button>
-      </div>
-        <div className="social-flex">
-          <div>
-            <img src={insta2}/>
-            <img src={insta3}/>
-          </div>
-          <div>
-            <img src={insta4}/>
-            <img src={insta5}/>
-          </div>
-        </div>
-      </div>
+      <div className="content-container">
+        <div className="arrange-catering-button">
+          <button className="map-catering-button">book catering</button>
+        </div> 
+        <div className="google-map-list">
+          <div><img src={dummyMap}/></div>
+          <div><img src={dummyMap}/></div>
+          <div><img src={dummyMap}/></div>
+        </div> 
       </div>
     </div>
   );

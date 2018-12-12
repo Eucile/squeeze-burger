@@ -8,38 +8,24 @@
     padding: 2em 0;
   }
 }
-
 .white-truck {
   width: 93px;
   height:68px;
 }
 .content-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction:column;
   margin: 0 auto;
   width: 80%;
 }
-
 .google-map-list {
   width: 60%;
-  padding-right: 3em;
+  margin: 4em auto;
   img {
     width: 100%;
   }
 }
-.social-sidebar {
-  display: flex;
-  flex-direction: column; 
-  justify-content: space-between;
-  width: 450px;
-  .social-flex {
-    width: 450px;
-  }
-  img {
-    width: 40%;
-  }
-}
-
 .schedule-banner {
   display: flex;
   justify-content: center;
@@ -61,7 +47,7 @@
   color: white;
   font-weight: bolder;
   font-size: 15px;
-  padding: 15px 45px;
+  padding: 15px 100px;
   border-radius: 1px;
   &:hover {
     background-color: black;
