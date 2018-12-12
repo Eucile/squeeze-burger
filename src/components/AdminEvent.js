@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-function AdminEvent({ onChangingSelectedEditEvent, streetAddress, state, city, zipcode, date, timeOpen, timeClose, eventId, addressState }) {
-
+function AdminEvent({onChangingSelectedEditEvent, streetAddress, addressState, city, zipcode, date, timeOpen, timeClose, eventId}) {
   return(
     <div className="box">
       <style>{`
@@ -15,6 +14,7 @@ function AdminEvent({ onChangingSelectedEditEvent, streetAddress, state, city, z
       <p>{date}</p>
       <p>{streetAddress}, {city}, {addressState} {zipcode}</p>
       <p>{timeOpen} to {timeClose}</p>
+
       <button
         onClick={() => {
           onChangingSelectedEditEvent(eventId);
