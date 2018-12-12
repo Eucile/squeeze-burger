@@ -5,8 +5,13 @@ import '../assets/styles/Booking.scss';
 
 function Booking(){
 
+function resetForm(){
+  var form = document.getElementById("contact-form");
+form.reset();
+}
+
   return (
-    <form id="contact-form" className="container">
+    <form id="contact-form" className="contact">
       <label>Date Of Event</label>
       <input name='date' type='date' label="Date of your event" onChange={function(e, value) {}} />
       <br/>
@@ -36,7 +41,7 @@ function Booking(){
       <label>Company:</label>
       <input name="company"/>
       <br/>
-      <input type="submit" value="Send"/>
+      <input type="submit" onClick={resetForm} value="Send"/>
     </form>
   );
 }
