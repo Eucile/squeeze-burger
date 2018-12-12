@@ -6,6 +6,11 @@ function AdminEvent({ onChangingSelectedEditEvent, streetAddress, state, city, z
 
 function AdminEvent({ streetAddress, addressState, city, zipcode, date, timeOpen, timeClose}) {
   return(
+<<<<<<< HEAD
+    <div id={eventId}>
+      <p>{streetAddress}</p>
+      <p>{city}, {state} {zipcode}</p>
+=======
     <div className="box">
       <style>{`
         .box {
@@ -16,6 +21,7 @@ function AdminEvent({ streetAddress, addressState, city, zipcode, date, timeOpen
       <p>{date}</p>
       <p>{streetAddress}, {city}, {addressState} {zipcode}</p>
       <p>{timeOpen} to {timeClose}</p>
+>>>>>>> master
       <button
         onClick={() => {
           onChangingSelectedEditEvent(eventId);
