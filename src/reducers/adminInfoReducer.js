@@ -5,10 +5,8 @@ export default (state = {}, action) => {
 
   switch(action.type) {
     case 'RECEIVE_ADDRESS':
-      console.log(action.address);
       newState = Object.assign({}, state);
       newState[action.address.id] = action.address;
-      console.log(newState);
       return newState;
 
     default:
