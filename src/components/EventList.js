@@ -5,9 +5,11 @@ import PropTypes from 'prop-types';
 function EventList(props) {
   return(
     <div>
-      {Object.keys(props.addresses).map((eventId) => {
+      {Object.keys(props.addresses).map(function(eventId) {
         var event = props.addresses[eventId];
-        return <Event key={event.eventId}
+        console.log(event);
+        return <Event key={eventId}
+          test={event}
           streetAddress={event.streetAddress}
           city={event.city}
           zipcode={event.zipcode}

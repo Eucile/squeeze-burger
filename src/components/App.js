@@ -8,10 +8,17 @@ import AddForm from './AddForm';
 import TestGoogleAPI from './TestGoogleAPI';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import * as actions from './../actions';
 
 class App extends Component {
   constructor(props) {
     super(props);
+  }
+
+  componentWillMount() {
+    const { dispatch } = this.props;
+    const { watchFirebaseAddressesRef } = actions;
+    dispatch(watchFirebaseAddressesRef());
   }
 
   render() {
@@ -19,10 +26,10 @@ class App extends Component {
       <div className="App">
         <Header/>
         <Admin
-          addresses={this.props.mapStateToProps}
+          addresses={this.props.addresses}
         />
         <Body
-          addresses={this.props.mapStateToProps}
+          addresses={this.props.addresses}
         />
         <Booking/>
         <Footer/>
