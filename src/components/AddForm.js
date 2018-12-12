@@ -3,6 +3,7 @@ import { fetchAdminInput } from './../actions';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import PropTypes from 'prop-types';
+import '../assets/styles/AddForm.scss';
 
 function AddForm(props) {
   let _streetAddress = null;
@@ -24,6 +25,7 @@ function AddForm(props) {
   };
 
   return(
+    <div className="add-form">
     <div>
       <form>
         <input
@@ -63,6 +65,7 @@ function AddForm(props) {
         />
         <button onClick={handleAddressSubmission}>Submit</button>
       </form>
+      </div>
     </div>
   );
 }

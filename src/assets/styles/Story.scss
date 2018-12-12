@@ -1,0 +1,29 @@
+.story-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 7em;
+  img {
+    width: 310px;
+  }
+  
+  .our-story-text {
+    margin: 1em 3em 0em 0em;
+    p {
+      width: 25em;
+      text-align: justify;
+      }
+    p:after {
+      content:'';
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+      }
+  }  
+}
+.our-story-header-overlay {
+  color: #DA6727;
+  font-size: 60px;
+  text-align: right;
+}
