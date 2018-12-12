@@ -4,10 +4,10 @@ import Admin from './Admin';
 import Body from './Body';
 import Booking from './Booking';
 import Footer from './Footer';
-import AddForm from './AddForm';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actions from './../actions';
+import { Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -24,15 +24,31 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <Admin
-          addresses={this.props.addresses}
-        />
-        <Body
-          addresses={this.props.addresses}
-        />
-        <Booking/>
+        <Switch>
+          <Route
+            exact path='/'
+            render={ () =>
+              <Body
+                addresses={this.props.addresses}
+              />
+            }
+          />
+          <Route
+            exact path='/admin'
+            render={ () =>
+              <Admin
+                addresses={this.props.addresses}
+              />
+            }
+          />
+          <Route
+            exact path='/Booking'
+            render={ () =>
+              <Booking/>
+            }
+          />
+        </Switch>
         <Footer/>
-        <AddForm/>
       </div>
     );
   }
