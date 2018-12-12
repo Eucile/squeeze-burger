@@ -51,6 +51,17 @@
     height: 68px;
   }
 }
+.combo {
+  text-align: right;
+}
+.side-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-spacing {
+  line-height: 1.5px;
+  margin-bottom: 2em;
+}
 
 @media only screen and (max-width: 800px) {
   .social-sidebar {
