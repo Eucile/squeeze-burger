@@ -10,10 +10,10 @@ class Admin extends React.Component {
     super(props);
     this.state = {
       selectedEditEvent: null,
-      streetAddressInput: null,
-      cityInput: null,
-      addressStateInput: null,
-      zipcodeInput: null
+      streetAddressInput: '',
+      cityInput: '',
+      addressStateInput: '',
+      zipcodeInput: ''
     }
     this.handleChangingSelectedEditEvent = this.handleChangingSelectedEditEvent.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
