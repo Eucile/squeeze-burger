@@ -67,6 +67,7 @@ export function watchFirebaseEditAddressesRef() {
       });
       dispatch(receiveAddress(newAddress));
     });
+
   }
 };
 
