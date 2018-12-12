@@ -18,6 +18,7 @@ function AddForm(props) {
 
   return(
     <div className="add-form">
+    <div>
       <form onSubmit={handleAddressSubmission}>
         <input
           placeholder='Street Address'
@@ -41,6 +42,7 @@ function AddForm(props) {
         />
         <button type='submit'>Submit</button>
       </form>
+      </div>
     </div>
   );
 }

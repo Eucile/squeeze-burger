@@ -17,6 +17,7 @@ class AdminLogIn extends React.Component{
   render() {
     return(
       <div className="log-in-styles">
+      <div>
           <form onSubmit={this.handleLogin}>
             <p>Sign into your account.</p>
             <input className="input"
@@ -31,6 +32,7 @@ class AdminLogIn extends React.Component{
               ref={(input) => {this.password = input;}}/>
             <button className='login-button' type='submit'>log in</button>
           </form>
+          </div>
       </div>
     );
   }
