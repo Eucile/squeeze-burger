@@ -8,7 +8,6 @@ function EventList({ addresses }) {
       {Object.keys(addresses).map(function(eventId) {
         var event = addresses[eventId];
         return <Event key={eventId}
-          test={event}
           streetAddress={event.streetAddress}
           state={event.state}
           city={event.city}
