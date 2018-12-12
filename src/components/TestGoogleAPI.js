@@ -1,5 +1,5 @@
 import React from 'react';
-import { googleAPIKey } from './../constants/googleAPIKey'
+import { googleMapAPIKey } from './../constants/googleMapAPIKey'
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 const googleMapsStyles = {
   width: '100%',
@@ -31,5 +31,5 @@ class TestGoogleAPI extends React.Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: (googleAPIKey)
+  apiKey: (googleMapAPIKey)
 })(TestGoogleAPI)

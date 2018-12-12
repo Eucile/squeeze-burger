@@ -6,13 +6,13 @@ import PropTypes from 'prop-types';
 function AddForm(props) {
   let _streetAddress = null;
   let _city = null;
-  let _state = null;
+  let _addressState = null;
   let _zipcode = null;
 
   function handleAddressSubmission(event) {
     const { dispatch } = props;
     event.preventDefault();
-    dispatch(fetchAdminInput(_streetAddress.value, _city.value, _state.value, _zipcode.value));
+    dispatch(fetchAdminInput(_streetAddress.value, _city.value, _addressState.value, _zipcode.value));
   };
 
   return(
@@ -31,7 +31,7 @@ function AddForm(props) {
         <input
           placeholder='State'
           type='text'
-          ref={(input) => {_state = input;}}
+          ref={(input) => {_addressState = input;}}
         />
         <input
           placeholder='Zipcode'
