@@ -55,20 +55,20 @@ function Booking(){
         <textarea name="details"></textarea>
         <br/>
         <label>Name:</label>
-        <input required="required" name="name"/>
+        <input name="name"/>
         <br/>
         <label>Phone:</label>
         <input name="phone" validate='true'/>
         <br/>
         <label>Email:</label>
-        <input required="required" name="email"/>
+        <input name="email"/>
         <br/>
         <label>Company:</label>
         <input name="company"/>
         <br/>
+        <input type="submit" id="myBtn" onClick={formSubmit} value="Send"/>
       </form>
 
-      <button id="myBtn">Open Modal</button>
 
       <div id="myModal" className="modal">
         <div className="modal-content">
@@ -80,6 +80,5 @@ function Booking(){
   );
 }
 
-// <input type="submit" id="myBtn" onClick={formSubmit} value="Send"/>
 
 export default Booking;
