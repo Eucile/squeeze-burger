@@ -2,14 +2,13 @@ import React from 'react';
 import GoogleMap from './GoogleMap';
 import PropTypes from 'prop-types';
 
-function Event({ streetAddress, state, city, zipcode, date, timeOpen, timeClose, lat, lng }) {
+function Event({ streetAddress, state, city, zipcode, date, timeOpen, timeClose, lat, lng}) {
   return(
     <div>
-      <p>{streetAddress}</p>
-      <p>{city}, {state} {zipcode}</p>
+      <style>{``}</style>
       <p>{date}</p>
-      <p>{timeOpen}</p>
-      <p>{timeClose}</p>
+      <p>{streetAddress}, {city}, {state} {zipcode}</p>
+      <p>{timeOpen} to {timeClose}</p>
       <GoogleMap
         lat={lat}
         lng={lng}

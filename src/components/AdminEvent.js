@@ -3,18 +3,15 @@ import PropTypes from 'prop-types';
 
 function AdminEvent({ streetAddress, state, city, zipcode, date, timeOpen, timeClose}) {
   return(
-    <div>
+    <div className="box">
       <style>{`
-        .flexBox {
-          display: flex;
+        .box {
+
         }
       `}</style>
-      <div className="flexBox">
-        <p>{date}</p>
-      </div>
+      <p>{date}</p>
       <p>{streetAddress}, {city}, {state} {zipcode}</p>
-      <p>{timeOpen}</p>
-      <p>{timeClose}</p>
+      <p>{timeOpen} to {timeClose}</p>
     </div>
   );
 }
