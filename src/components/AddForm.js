@@ -25,7 +25,7 @@ function AddForm(props) {
 
   return(
     <div>
-      <form onSubmit={handleAddressSubmission}>
+      <form>
         <input
           placeholder='Street Address'
           type='text'
@@ -61,7 +61,7 @@ function AddForm(props) {
           type='time'
           ref={(input) => {_timeClose = input;}}
         />
-        <button type='submit'>Submit</button>
+        <button onClick={handleAddressSubmission}>Submit</button>
       </form>
     </div>
   );
