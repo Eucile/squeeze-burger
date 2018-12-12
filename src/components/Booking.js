@@ -5,15 +5,12 @@ import '../assets/styles/Booking.scss';
 
 function Booking(){
 
-
-
   return (
     <form id="contact-form">
       <label>Date Of Event</label>
       <input name='date' type='date' label="Date of your event" onChange={function(e, value) {}} />
       <br/>
       <label>Approx. from  </label>
-
       <input type="time" name="from" placeholder="from" label="Time Range" />
       <span>  to  </span>
       <input type="time" name="to" placeholder="to" />
