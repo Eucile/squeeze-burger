@@ -9,7 +9,7 @@ function AdminEventList({ addresses }) {
         var addressEvent = addresses[addressEventId];
         return <AdminEvent key={addressEventId}
           streetAddress={addressEvent.streetAddress}
-          state={addressEvent.state}
+          addressState={addressEvent.addressState}
           city={addressEvent.city}
           zipcode={addressEvent.zipcode}
           date={addressEvent.date}

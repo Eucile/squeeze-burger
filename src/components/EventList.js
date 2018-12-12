@@ -9,7 +9,7 @@ function EventList({ addresses }) {
         var event = addresses[eventId];
         return <Event key={eventId}
           streetAddress={event.streetAddress}
-          state={event.state}
+          addressState={event.addressState}
           city={event.city}
           zipcode={event.zipcode}
           date={event.date}
