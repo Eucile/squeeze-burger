@@ -13,7 +13,6 @@ function AdminEventList({ addresses }) {
           city={addressEvent.city}
           zipcode={addressEvent.zipcode}
           date={addressEvent.date}
-          dayOfWeek={addressEvent.dayOfWeek}
           timeOpen={addressEvent.timeOpen}
           timeClose={addressEvent.timeClose}/>
       })}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchAdminInput } from './../actions';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 
 function AddForm(props) {
@@ -15,9 +16,11 @@ function AddForm(props) {
   function handleAddressSubmission(event) {
     const { dispatch } = props;
     event.preventDefault();
-    const day = new Date(_date.value);
-    const dayOfWeek = day.getDay();
-    dispatch(fetchAdminInput(_streetAddress.value, _city.value, _addressState.value, _zipcode.value, _date.value, _timeOpen.value, _timeClose.value, dayOfWeek));
+    const formattedDate = moment(_date.value).format('dddd, MMMM D, YYYY');
+    const formattedTimeOpen = moment(_timeOpen.value, 'HH:mm').format('h:mm A');
+    const formattedTimeClose = moment(_timeClose.value, 'HH:mm').format('h:mm A');
+    console.log(formattedDate)
+    dispatch(fetchAdminInput(_streetAddress.value, _city.value, _addressState.value, _zipcode.value, formattedDate, formattedTimeOpen, formattedTimeClose));
   };
 
   return(

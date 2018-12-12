@@ -15,7 +15,6 @@ function EventList({ addresses }) {
           date={event.date}
           timeOpen={event.timeOpen}
           timeClose={event.timeClose}
-          dayOfWeek={event.dayOfWeek}
           lat={event.lat}
           lng={event.lng}/>
       })}
