@@ -8,8 +8,8 @@ firebase.initializeApp(firebaseConfig);
 const addresses = firebase.database().ref('addresses');
 /*eslint-enable */
 
-export function fetchAdminInput(streetAddress, city, addresState, zipcode) {
-  const addressConcat = streetAddress + city + addresState + zipcode;
+export function fetchAdminInput(streetAddress, city, addressState, zipcode) {
+  const addressConcat = streetAddress + city + addressState + zipcode;
   return function (dispatch) {
     return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${addressConcat}&key=${googleMapAPIKey}`).then(
       response => response.json(),
@@ -18,18 +18,28 @@ export function fetchAdminInput(streetAddress, city, addresState, zipcode) {
       addresses.push({
         streetAddress: streetAddress,
         city: city,
-        addresState: addresState,
+        addresState: addressState,
         zipcode: zipcode,
         lat: json.results[0].geometry.location.lat,
         lng: json.results[0].geometry.location.lng
       });
     });
   };
-}
+};
+
+export function editSelectedAddress(selectedEditEvent, streetAddress, city, addresState, zipcode) {
+  return function (dispatch) {
+    return addresses.child(selectedEditEvent).update({
+      streetAddress: streetAddress,
+      city: city,
+      addresState: addresState,
+      zipcode: zipcode
+    });
+  };
+};
 
 export function watchFirebaseAddressesRef() {
   return function(dispatch) {
-    console.log(addresses);
     addresses.on('child_added', data => {
       const newAddress = Object.assign({}, data.val(), {
         id: data.getKey()
@@ -37,11 +47,11 @@ export function watchFirebaseAddressesRef() {
       dispatch(receiveAddress(newAddress));
     });
   }
-}
+};
 
 function receiveAddress(addressFromFirebase) {
   return {
     type: 'RECEIVE_ADDRESS',
     address: addressFromFirebase
   }
-}
+};
