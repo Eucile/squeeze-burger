@@ -14,7 +14,11 @@ class Admin extends React.Component {
       streetAddressInput: '',
       cityInput: '',
       addressStateInput: '',
-      zipcodeInput: ''
+      zipcodeInput: '',
+      dateInput: '',
+      timeOpenInput: '',
+      timeCloseInput: ''
+
     }
     this.handleChangingSelectedEditEvent = this.handleChangingSelectedEditEvent.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -26,7 +30,10 @@ class Admin extends React.Component {
       streetAddressInput: this.props.addresses[selectedEventId].streetAddress,
       cityInput: this.props.addresses[selectedEventId].city,
       addressStateInput: this.props.addresses[selectedEventId].addressState,
-      zipcodeInput: this.props.addresses[selectedEventId].zipcode
+      zipcodeInput: this.props.addresses[selectedEventId].zipcode,
+      dateInput: this.props.addresses[selectedEventId].date,
+      timeOpenInput: this.props.addresses[selectedEventId].timeOpen,
+      timeCloseInput: this.props.addresses[selectedEventId].timeClose
     });
   }
 
@@ -48,6 +55,9 @@ class Admin extends React.Component {
             cityInput={this.state.cityInput}
             addressStateInput={this.state.addressStateInput}
             zipcodeInput={this.state.zipcodeInput}
+            dateInput={this.state.dateInput}
+            timeOpenInput={this.state.timeOpenInput}
+            timeCloseInput={this.state.timeCloseInput}
           />
         </div>
         <AdminEventList

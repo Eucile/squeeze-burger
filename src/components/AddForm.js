@@ -77,7 +77,7 @@ function AddForm(props) {
             ref={(input) => {_timeClose = input;}}
           />
           <div>
-            <button className="add-button" onClick={handleAddressSubmission}>Add</button>
+            <button className="add-button" onClick={handleAddressSubmission}>SUBMIT</button>
           </div>
         </div>
       </form>

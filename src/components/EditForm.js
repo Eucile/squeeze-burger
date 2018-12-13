@@ -87,7 +87,7 @@ function EditForm(props) {
           type='date'
           name='dateInput'
           onChange={(event) => {props.onInputChange(event)}}
-          value={props.zipcodeInput}
+          value={props.dateInput}
           ref={(input) => {_date = input;}}
         />
         <input
@@ -95,7 +95,7 @@ function EditForm(props) {
           type='time'
           name='timeOpenInput'
           onChange={(event) => {props.onInputChange(event)}}
-          value={props.zipcodeInput}
+          value={props.timeOpenInput}
           ref={(input) => {_timeOpen = input;}}
         />
         <input
@@ -103,7 +103,7 @@ function EditForm(props) {
           type='time'
           name='timeCloseInput'
           onChange={(event) => {props.onInputChange(event)}}
-          value={props.zipcodeInput}
+          value={props.timeCloseInput}
           ref={(input) => {_timeClose = input;}}
         />
         <button onClick={handleEditAddressSubmission}>Submit</button>
