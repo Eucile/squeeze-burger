@@ -17,7 +17,9 @@ function Header(){
   return (
     <div className="HeaderStyles">
         <ul className="nav-list">
-          <li className="nav-list"><Link to="/"style={{ color: '#FFF', textDecoration: 'none' }}>home</Link></li>
+          <li className="nav-list">
+            <Link to="/"style={{ color: '#FFF', textDecoration: 'none' }}>home</Link>
+          </li>
           <li className="nav-list">menu</li>
           <li className="nav-list">locations</li>
           <li className="nav-list">story</li>
@@ -25,7 +27,9 @@ function Header(){
         </ul>
         <div></div>
         <div>
-          <button className="booking-button">book catering</button>
+          <button className="booking-button">
+            <Link to="/booking">book catering</Link>
+          </button>
         </div>
     </div>
   );

@@ -4,7 +4,7 @@ import Firebase from 'firebase';
 const { firebaseConfig } = constants;
 
 /*eslint-disable */
-const fb = firebase;
+const fb = Firebase;
 fb.initializeApp(firebaseConfig);
 const addresses = fb.database().ref('addresses');
 /*eslint-enable */

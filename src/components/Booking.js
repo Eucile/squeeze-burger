@@ -29,7 +29,8 @@ function Booking(){
     }
   });
 
-  function formSubmit(){
+  function formSubmit(event){
+    event.preventDefault();
     var form = document.getElementById("contact-form");
     form.reset();
   }
@@ -67,41 +68,51 @@ function Booking(){
           font-family: 'Montserrat';
           font-weight: bold;
         }
+        .clearButton {
+          background-color: #D9672A;
+          border: none;
+          border-radius: 1em;
+          color: #FFFFFF;
+          font-family: 'Montserrat';
+          font-weight: bold;
+          max-width: 90px;
+        }
       `}</style>
-      <form className="form">
+    <form id="contact-form" className="form">
         <h2>Contact Information:</h2>
         <label>Name:</label>
-        <input name="name"/>
+        <input default="" name="name"/>
         <br/>
         <label>Phone:</label>
-        <input name="phone" validate='true'/>
+        <input default="" name="phone" validate='true'/>
         <br/>
         <label>Email:</label>
-        <input name="email"/>
+        <input default="" name="email"/>
         <br/>
         <label>Company:</label>
-        <input name="company"/>
+        <input default="" name="company"/>
         <br/>
         <h2>Event Information:</h2>
         <label>Date of event:</label>
-        <input name='date' type='date' label="Date of your event" onChange={function(e, value) {}} />
+        <input default="" name='date' type='date' label="Date of your event" onChange={function(e, value) {}} />
         <br/>
         <label>From:</label>
-        <input type="time" name="from" placeholder="from" label="Time Range" />
+        <input  default="" type="time" name="from" placeholder="from" label="Time Range" />
         <span>to:</span>
-        <input type="time" name="to" placeholder="to" />
+        <input default="" type="time" name="to" placeholder="to" />
         <br/>
         <label>Location:</label>
-        <input name="location" label="Location"/>
+        <input default="" name="location" label="Location"/>
         <br/>
         <label>Number of guests:</label>
-        <input name="guests" type="number" label="Approx. number of guests" />
+        <input default="" name="guests" type="number" label="Approx. number of guests" />
         <br/>
         <label>Tell us about your event:</label>
         <br/>
-        <textarea name="details"></textarea>
+        <textarea default="" name="details"></textarea>
         <br/>
-        <input type="submit" className="button" id="myBtn" onClick={formSubmit} value="SEND"/>
+        <input type="submit" default=""  className="button" id="myBtn"  value="SEND"/>
+        <input default="" onClick={formSubmit} className="clearButton"  value="CLEAR FORM"/>
       </form>
 
 
@@ -115,6 +126,8 @@ function Booking(){
     </div>
   );
 }
+
+
 
 
 export default Booking;

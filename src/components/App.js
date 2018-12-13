@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import constants from './../constants';
 import PropTypes from 'prop-types';
 import * as actions from './../actions';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import AddForm from './AddForm';
 import AdminLogIn from './AdminLogIn';
 
@@ -26,7 +26,7 @@ class App extends Component {
     dispatch(watchFirebaseDeleteAddressesRef());
     dispatch(watchFirebaseEditAddressesRef());
   }
-  
+
   componentDidMount() {
     const { dispatch } = this.props;
     const {  watchFirebaseDeleteAddressesRef } = actions;
@@ -46,11 +46,17 @@ class App extends Component {
               />
             }
           />
-          <Route path='/login'
-          render={ () => <AdminLogIn firebase={firebase} /> } />
+          <Route
+            path='/login'
+            render={ () =>
+              <AdminLogIn
+                firebase={firebase}
+              />
+            }
+          />
 
           <Route
-            exact path='/admin'
+            path='/admin'
             render={ () =>
               <Admin
                 addresses={this.props.addresses}
@@ -58,7 +64,7 @@ class App extends Component {
             }
           />
           <Route
-            exact path='/Booking'
+            path='/booking'
             render={ () =>
               <Booking/>
             }
@@ -80,4 +86,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(App);
+export default withRouter(connect(mapStateToProps)(App));
