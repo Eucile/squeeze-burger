@@ -1,7 +1,10 @@
 .admin-container {
   display: flex;
-  width: 100%;
   justify-content: center;
   flex-direction: column;
-  padding: 3em;
+}
+
+.add-and-edit {
+  display: flex;
+  margin-bottom: 50px;
 }

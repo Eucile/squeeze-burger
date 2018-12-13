@@ -39,15 +39,17 @@ class Admin extends React.Component {
   render() {
     return(
       <div className="admin-container">
-        <AddForm />
-        <EditForm
-          onInputChange={this.handleInputChange}
-          selectedEditEvent={this.state.selectedEditEvent}
-          streetAddressInput={this.state.streetAddressInput}
-          cityInput={this.state.cityInput}
-          addressStateInput={this.state.addressStateInput}
-          zipcodeInput={this.state.zipcodeInput}
-        />
+        <div className="add-and-edit">
+          <AddForm />
+          <EditForm
+            onInputChange={this.handleInputChange}
+            selectedEditEvent={this.state.selectedEditEvent}
+            streetAddressInput={this.state.streetAddressInput}
+            cityInput={this.state.cityInput}
+            addressStateInput={this.state.addressStateInput}
+            zipcodeInput={this.state.zipcodeInput}
+          />
+        </div>
         <AdminEventList
           onChangingSelectedEditEvent={this.handleChangingSelectedEditEvent}
           addresses={this.props.addresses}

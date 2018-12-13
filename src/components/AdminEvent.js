@@ -13,9 +13,7 @@ function AdminEvent({onChangingSelectedEditEvent, streetAddress, addressState, c
           margin-inline-end: 0px;
         }
         .box {
-          margin-top: 35px;
-          margin-bottom: 35px;
-          margin-left: 25px;
+          margin: 0px auto 10px auto;
           border: 2px solid #E9ECF2;
           border-left: 5px solid #E9ECF2;
           width: 800px;
@@ -49,7 +47,7 @@ function AdminEvent({onChangingSelectedEditEvent, streetAddress, addressState, c
         <p>{streetAddress}, {city}, {addressState} {zipcode}</p>
       </div>
       <div className="button">
-        <button onClick={() => {onChangingSelectedEditEvent(eventId);}}>Edit Button</button>
+        <button onClick={() => {onChangingSelectedEditEvent(eventId);}}>Edit</button>
       </div>
     </div>
   );
