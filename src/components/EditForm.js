@@ -35,6 +35,7 @@ function EditForm(props) {
     const formattedTimeOpen = moment(_timeOpen.value, 'HH:mm').format('h A');
     const formattedTimeClose = moment(_timeClose.value, 'HH:mm').format('h A');
     dispatch(editSelectedAddress(props.selectedEditEvent, _streetAddress.value, _city.value, _addressState.value, _zipcode.value, formattedDate, formattedTimeOpen, formattedTimeClose));
+    props.onResetForm();
   };
 
   function handleDeleteAddressSubmission(event) {
@@ -125,6 +126,7 @@ function EditForm(props) {
 }
 
 EditForm.propTypes = {
+  onResetForm: PropTypes.func,
   dispatch: PropTypes.func,
   onInputChange: PropTypes.func,
   selectedEditEvent: PropTypes.string,

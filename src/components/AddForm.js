@@ -23,6 +23,7 @@ function AddForm(props) {
     const formattedTimeClose = moment(_timeClose.value, 'HH:mm').format('h A');
     console.log(formattedDate);
     dispatch(fetchAdminInput(_streetAddress.value, _city.value, _addressState.value, _zipcode.value, formattedDate, formattedTimeOpen, formattedTimeClose));
+    props.onResetForm();
   };
 
   return(
@@ -86,6 +87,7 @@ function AddForm(props) {
 }
 
 AddForm.propTypes = {
+  onResetForm: PropTypes.func,
   dispatch: PropTypes.func
 };
 

@@ -18,10 +18,22 @@ class Admin extends React.Component {
       dateInput: '',
       timeOpenInput: '',
       timeCloseInput: ''
-
     }
     this.handleChangingSelectedEditEvent = this.handleChangingSelectedEditEvent.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleResetForm = this.handleResetForm.bind(this);
+  }
+
+  handleResetForm() {
+    this.setState({
+      streetAddressInput: '',
+      cityInput: '',
+      addressStateInput: '',
+      zipcodeInput: '',
+      dateInput: '',
+      timeOpenInput: '',
+      timeCloseInput: ''
+    });
   }
 
   handleChangingSelectedEditEvent(selectedEventId) {
@@ -47,8 +59,11 @@ class Admin extends React.Component {
     return(
       <div className="admin-container">
         <div className="add-and-edit">
-          <AddForm />
+          <AddForm
+            onResetForm={this.handleResetForm}
+          />
           <EditForm
+            onResetForm={this.handleResetForm}
             onInputChange={this.handleInputChange}
             selectedEditEvent={this.state.selectedEditEvent}
             streetAddressInput={this.state.streetAddressInput}
