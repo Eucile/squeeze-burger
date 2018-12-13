@@ -12,11 +12,9 @@
   width: 100%;
   background-size: cover;
   background-attachment: fixed;
-  img {
-    width: 100%;
-  }
   .black-logo {
-    max-width: 550px;
+    width: 550px;
+    height: 303px;
     margin: 0 auto;
   }
 }
@@ -41,7 +39,7 @@
     display: flex;
     justify-content: center;
     padding: 1em;
-    img {  
+    img {
       width: 100%;
     }
   }
