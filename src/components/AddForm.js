@@ -27,7 +27,17 @@ function AddForm(props) {
 
   return(
     <div className="add-form">
-      <form>
+      <style>{`
+        .form {
+          margin-top: 125px;
+          margin-right: 10px;
+          width: 350px;
+          padding: 1em;
+          border: 1px solid #CCC;
+          border-radius: 1em;
+        }
+      `}</style>
+      <form className="form">
         <div>
           <input
             placeholder='Street Address'
@@ -66,7 +76,9 @@ function AddForm(props) {
             type='time'
             ref={(input) => {_timeClose = input;}}
           />
-          <button className="add-button" onClick={handleAddressSubmission}>Add</button>
+          <div>
+            <button className="add-button" onClick={handleAddressSubmission}>SUBMIT</button>
+          </div>
         </div>
       </form>
     </div>

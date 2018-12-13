@@ -38,12 +38,9 @@ function Booking(){
   return (
     <div className="form-container">
       <style>{`
-        .form-container {
-          margin: 50px auto;
-        }
         .form {
-          margin: 0 auto;
-          width: 400px;
+          margin: 285px auto;
+          width: 350px;
           padding: 1em;
           border: 1px solid #CCC;
           border-radius: 1em;

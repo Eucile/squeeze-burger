@@ -32,13 +32,16 @@ export function fetchAdminInput(streetAddress, city, addressState, zipcode, date
   };
 };
 
-export function editSelectedAddress(selectedEditEvent, streetAddress, city, addressState, zipcode) {
+export function editSelectedAddress(selectedEditEvent, streetAddress, city, addressState, zipcode, date, timeOpen, timeClose) {
   return function (dispatch) {
     return addresses.child(selectedEditEvent).update({
       streetAddress: streetAddress,
       city: city,
       addressState: addressState,
-      zipcode: zipcode
+      zipcode: zipcode,
+      date: date,
+      timeOpen: timeOpen,
+      timeClose: timeClose
     });
   };
 };

@@ -3,6 +3,8 @@
   color: white;
   display: flex;
   position: fixed;
+  top: 0;
+  z-index: 1000;
   font-size: 19px;
   justify-content: space-around;
   align-items: center;
