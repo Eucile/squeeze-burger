@@ -135,8 +135,8 @@ EditForm.propTypes = {
   addressStateInput: PropTypes.string,
   zipcodeInput: PropTypes.string,
   dateInput: PropTypes.string,
-  timeOpenInput: PropTypes.number,
-  timeCloseInput: PropTypes.number
+  timeOpenInput: PropTypes.string,
+  timeCloseInput: PropTypes.string
 };
 
 export default connect()(EditForm);
