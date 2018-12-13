@@ -17,12 +17,8 @@ class GoogleMap extends React.Component {
   }
 
   render() {
-    console.log(this.props.lat);
     return (
       <div id="map-styles">
-        <Marker onClick={this.onMarkerClick}
-        name={'Current location'} />
-        <InfoWindow onClose={this.onInfoWindowClose}/>
         <Map
           google={this.props.google}
           style={googleMapsStyles}
@@ -30,8 +26,14 @@ class GoogleMap extends React.Component {
             lat: this.props.lat,
             lng: this.props.lng
           }}
-          zoom={14}
-          />
+          zoom={14}>
+
+          <Marker onClick={this.onMarkerClick}
+          name={'Current location'} />
+
+          
+
+        </Map>
       </div>
     );
   };
