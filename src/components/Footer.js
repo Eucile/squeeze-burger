@@ -18,7 +18,6 @@ function Footer(){
           <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/squeezeinntruck?lang=en">
         <li className="icon-list"><img src={twitterIcon}/></li>
         </a>
-        <li className="icon-list"><img src={googleIcon}/></li>
       </ul>
     </div>
   );
