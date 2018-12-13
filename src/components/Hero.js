@@ -1,6 +1,6 @@
 import React from "react";
 import '../assets/styles/Hero.scss';
-import blackLogo from '../assets/logos/squeeze_logo_black.png';
+import blackLogo from '../assets/logos/outlined-orange.png';
 
 
 function Maps(){

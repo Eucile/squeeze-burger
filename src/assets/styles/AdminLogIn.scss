@@ -5,3 +5,28 @@
   width: 100%;
   height: 100vh;
 }
+
+input, textarea {
+  height: auto;
+  border-radius: 2px;
+  border-left: hidden;
+  border-top: hidden;
+  padding: 7px;
+  margin: .4em;
+  font-size: .75em;
+}
+
+button {
+  background: black;
+  color: white;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  border-radius: 25px;
+  &:hover {
+    color: #DA6727;
+  }
+}
