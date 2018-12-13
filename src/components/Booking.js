@@ -71,6 +71,15 @@ function Booking(){
           font-family: 'Montserrat';
           font-weight: bold;
         }
+        .clearButton {
+          background-color: #D9672A;
+          border: none;
+          border-radius: 1em;
+          color: #FFFFFF;
+          font-family: 'Montserrat';
+          font-weight: bold;
+          max-width: 90px;
+        }
       `}</style>
     <form id="contact-form" className="form">
         <h2>Contact Information:</h2>
@@ -106,7 +115,7 @@ function Booking(){
         <textarea default="" name="details"></textarea>
         <br/>
         <input type="submit" default=""  className="button" id="myBtn"  value="SEND"/>
-        <input default="" onClick={formSubmit} className="button" id="myBtn"  value="CLEAR FORM"/>
+        <input default="" onClick={formSubmit} className="clearButton"  value="CLEAR FORM"/>
       </form>
 
 
