@@ -48,6 +48,10 @@ function EditForm(props) {
           border: 1px solid #CCC;
           border-radius: 1em;
         }
+        .delete {
+          background-color: #F40000;
+          margin-left: 5px;
+        }
       `}</style>
       <form className="form">
         <input
@@ -106,8 +110,10 @@ function EditForm(props) {
           value={props.timeCloseInput}
           ref={(input) => {_timeClose = input;}}
         />
-        <button onClick={handleEditAddressSubmission}>Submit</button>
-        <button onClick={handleDeleteAddressSubmission}>Delete</button>
+        <div>
+          <button onClick={handleEditAddressSubmission}>Submit</button>
+          <button className="delete" onClick={handleDeleteAddressSubmission}>Delete</button>
+        </div>
       </form>
     </div>
   );
