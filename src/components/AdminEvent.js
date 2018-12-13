@@ -6,8 +6,18 @@ function AdminEvent({onChangingSelectedEditEvent, streetAddress, addressState, c
   return(
     <div className="box">
       <style>{`
+        p {
+          margin-block-start: 0px;
+          margin-block-end: 0px;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+        }
         .box {
-          border: 1px solid #E9ECF2;
+          margin-top: 35px;
+          margin-bottom: 35px;
+          margin-left: 25px;
+          border: 2px solid #E9ECF2;
+          border-left: 5px solid #E9ECF2;
           width: 800px;
         }
         .dateAndTime {
@@ -20,24 +30,23 @@ function AdminEvent({onChangingSelectedEditEvent, streetAddress, addressState, c
           color: #868e9e;
         }
         .address {
-          margin-top: 5px;
           margin-left: 20px;
+          margin-bottom: 20px;
           font-size: 1.25rem;
           color: #49505e;
         }
         .button {
           display: flex;
           justify-content: center;
-          margin-top: 20px;
           margin-bottom: 20px;
         }
       `}</style>
       <div className="dateAndTime">
-        <h6>{date}</h6>
-        <h6>{timeOpen} to {timeClose}</h6>
+        <p>{date}</p>
+        <p>{timeOpen} to {timeClose}</p>
       </div>
       <div className="address">
-        <h5>{streetAddress}, {city}, {addressState} {zipcode}</h5>
+        <p>{streetAddress}, {city}, {addressState} {zipcode}</p>
       </div>
       <div className="button">
         <button onClick={() => {onChangingSelectedEditEvent(eventId);}}>Edit Button</button>
