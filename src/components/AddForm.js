@@ -27,7 +27,16 @@ function AddForm(props) {
 
   return(
     <div className="add-form">
-      <form>
+      <style>{`
+        .form {
+          margin-top: 125px;
+          width: 350px;
+          padding: 1em;
+          border: 1px solid #CCC;
+          border-radius: 1em;
+        }
+      `}</style>
+      <form className="form">
         <div>
           <input
             placeholder='Street Address'
