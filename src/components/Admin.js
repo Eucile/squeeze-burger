@@ -3,6 +3,7 @@ import AddForm from './AddForm';
 import EditForm from './EditForm';
 import AdminEventList from './AdminEventList';
 import PropTypes from 'prop-types';
+import '../assets/styles/Admin.scss';
 
 class Admin extends React.Component {
 
@@ -37,7 +38,7 @@ class Admin extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="admin-container">
         <AddForm />
         <EditForm
           onInputChange={this.handleInputChange}

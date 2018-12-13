@@ -1,16 +1,16 @@
-.add-form {
+.edit-form {
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
   input {
     width: 150px;
     font-size: 15px;
   }
-  .add-button {
+  .edit-button {
     width: 170px;
     font-size: 15px;
     padding: 13px 65px;
     padding: 10px 45px;
     border-radius: 1px;
+    margin-right: 5px;
   }
 }

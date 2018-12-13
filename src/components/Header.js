@@ -7,7 +7,7 @@ import { handleLogout, getCurrentUser } from '../actions';
 
 function getButton() {
   if(getCurrentUser()){
-    return <button onClick={handleLogout} className='login-button' type='submit'>log out</button>
+    return <li onClick={handleLogout} className='logout-button' type='submit'>log out</li>
   } else {
     return <Link to="/login" style={{ color: '#FFF', textDecoration: 'none' }}>log in</Link>
   }

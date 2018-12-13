@@ -2,6 +2,7 @@ import React from 'react';
 import { editSelectedAddress, deleteSelectedAddress } from './../actions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import '../assets/styles/EditForm.scss';
 
 function EditForm(props) {
 
@@ -30,7 +31,7 @@ function EditForm(props) {
   };
 
   return(
-    <div>
+    <div className="edit-form">
       <form>
         <input
           placeholder='Street Address'
@@ -64,8 +65,8 @@ function EditForm(props) {
           value={props.zipcodeInput}
           ref={(input) => {_zipcode = input;}}
         />
-        <button onClick={handleEditAddressSubmission}>Submit</button>
-        <button onClick={handleDeleteAddressSubmission}>Delete</button>
+        <button className="edit-button" onClick={handleEditAddressSubmission}>Submit</button>
+        <button className="edit-button" onClick={handleDeleteAddressSubmission}>Delete</button>
       </form>
     </div>
   );
