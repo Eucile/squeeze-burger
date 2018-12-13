@@ -26,7 +26,7 @@ class App extends Component {
     dispatch(watchFirebaseDeleteAddressesRef());
     dispatch(watchFirebaseEditAddressesRef());
   }
-  
+
   componentDidMount() {
     const { dispatch } = this.props;
     const {  watchFirebaseDeleteAddressesRef } = actions;
@@ -64,6 +64,7 @@ class App extends Component {
             }
           />
         </Switch>
+        <div></div>
         <Footer/>
       </div>
     );

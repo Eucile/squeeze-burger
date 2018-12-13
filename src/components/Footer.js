@@ -7,14 +7,14 @@ import instaIcon from '../assets/sketch/insta_social_icon.png';
 
 function Footer(){
   return (
-    <div className="FooterStyles">
-      <ul className="icon-list">
-        <li className="icon-list"><img src={fbIcon}/></li>
-        <li className="icon-list"><img src={instaIcon}/></li>
-        <li className="icon-list"><img src={twitterIcon}/></li>
-        <li className="icon-list"><img src={googleIcon}/></li>
-      </ul>
-    </div>
+      <div className="FooterStyles">
+        <ul className="icon-list">
+          <li className="icon-list"><img src={fbIcon}/></li>
+          <li className="icon-list"><img src={instaIcon}/></li>
+          <li className="icon-list"><img src={twitterIcon}/></li>
+          <li className="icon-list"><img src={googleIcon}/></li>
+        </ul>
+      </div>
   );
 }
 
