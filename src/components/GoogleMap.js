@@ -17,6 +17,7 @@ class GoogleMap extends React.Component {
   }
 
   render() {
+    console.log(this.props.lat);
     return (
       <div id="map-styles">
         <Marker onClick={this.onMarkerClick}

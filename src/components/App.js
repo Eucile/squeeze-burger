@@ -20,7 +20,13 @@ class App extends Component {
     const { dispatch } = this.props;
     const { watchFirebaseAddressesRef, watchFirebaseEditAddressesRef, watchFirebaseDeleteAddressesRef } = actions;
     dispatch(watchFirebaseAddressesRef());
+    dispatch(watchFirebaseDeleteAddressesRef());
     dispatch(watchFirebaseEditAddressesRef());
+  }
+  
+  componentDidMount() {
+    const { dispatch } = this.props;
+    const {  watchFirebaseDeleteAddressesRef } = actions;
     dispatch(watchFirebaseDeleteAddressesRef());
   }
 

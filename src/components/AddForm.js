@@ -17,7 +17,8 @@ function AddForm(props) {
   function handleAddressSubmission(event) {
     const { dispatch } = props;
     event.preventDefault();
-    const formattedDate = moment(_date.value).format('dddd, MMMM D, YYYY');
+    const momentDate = moment(_date.value).format('dddd, MMMM D, YYYY');
+    const formattedDate = momentDate.toUpperCase();
     const formattedTimeOpen = moment(_timeOpen.value, 'HH:mm').format('h A');
     const formattedTimeClose = moment(_timeClose.value, 'HH:mm').format('h A');
     console.log(formattedDate)

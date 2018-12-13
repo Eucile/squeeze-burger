@@ -74,11 +74,10 @@ export function watchFirebaseEditAddressesRef() {
 export function watchFirebaseDeleteAddressesRef() {
   return function(dispatch) {
     addresses.on('child_removed', data => {
-      const newAddress = Object.assign({}, data.val(), {
-        id: data.getKey()
-      });
-      dispatch(receiveAddress(newAddress));
+      console.log("DELETE");
+      dispatch(deleteAddress(data.getKey()));
     });
+    console.log("DELETE");
   }
 };
 
@@ -86,5 +85,13 @@ function receiveAddress(addressFromFirebase) {
   return {
     type: 'RECEIVE_ADDRESS',
     address: addressFromFirebase
+  }
+};
+
+function deleteAddress(deleteAddressId) {
+  console.log(deleteAddressId);
+  return {
+    type: 'DELETE_ADDRESS',
+    deleteAddressId: deleteAddressId
   }
 };
