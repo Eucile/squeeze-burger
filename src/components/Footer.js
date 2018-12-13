@@ -9,7 +9,9 @@ function Footer(){
   return (
     <div className="FooterStyles">
       <ul className="icon-list">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/squeezeburger/">
         <li className="icon-list"><img src={fbIcon}/></li>
+        </a>
         <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/squeezeburgertruck">
         <li className="icon-list"><img src={instaIcon}/></li>
         </a>
