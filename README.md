@@ -1,3 +1,5 @@
+![Squeeze Burger Logo](https://github.com/Eucile/squeeze-burger/blob/master/src/assets/logos/outlined-orange.png)
+
 # Squeeze Burger
 
 ## Description
