@@ -8,11 +8,11 @@ function Header(){
   return (
     <div className="HeaderStyles">
         <ul className="nav-list">
-          <li className="nav-list">home</li>
+          <li className="nav-list"><Link to="/"style={{ color: '#FFF', textDecoration: 'none' }}>home</Link></li>
           <li className="nav-list">menu</li>
           <li className="nav-list">locations</li>
           <li className="nav-list">story</li>
-          <li className="nav-list"><Link to="/login" style={{ color: '#FFF', textDecoration: 'none' }}>log in</Link></li>
+          <Link to="/login" style={{ color: '#FFF', textDecoration: 'none' }}><li className="nav-list">log in</li></Link>
         </ul>
         <div></div>
         <div>
