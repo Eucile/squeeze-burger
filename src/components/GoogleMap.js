@@ -6,7 +6,7 @@ import schedule from '../assets/logos/SCHEDULE_orange.png';
 import { googleMapAPIKey } from './../constants/googleMapAPIKey'
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 const googleMapsStyles = {
-  width: '50vw',
+  width: '80vw',
   height: '100px',
 };
 

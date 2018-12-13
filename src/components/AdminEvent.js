@@ -13,12 +13,11 @@ function AdminEvent({onChangingSelectedEditEvent, streetAddress, addressState, c
           margin-inline-end: 0px;
         }
         .box {
-          margin-top: 35px;
-          margin-bottom: 35px;
-          margin-left: 25px;
+          display: flex;
+          justify-content: center;
           border: 2px solid #E9ECF2;
           border-left: 5px solid #E9ECF2;
-          width: 800px;
+          width: 80%;
         }
         .dateAndTime {
           display: flex;
