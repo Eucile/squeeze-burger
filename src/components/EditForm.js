@@ -1,5 +1,6 @@
 import React from 'react';
 import { editSelectedAddress, deleteSelectedAddress } from './../actions';
+import moment from 'moment';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import '../assets/styles/EditForm.scss';
@@ -29,7 +30,11 @@ function EditForm(props) {
   function handleEditAddressSubmission(event) {
     const { dispatch } = props;
     event.preventDefault();
-    dispatch(editSelectedAddress(props.selectedEditEvent, _streetAddress.value, _city.value, _addressState.value, _zipcode.value, _date.value, _timeOpen.value, _timeClose.value));
+    const momentDate = moment(_date.value).format('dddd, MMMM D, YYYY');
+    const formattedDate = momentDate.toUpperCase();
+    const formattedTimeOpen = moment(_timeOpen.value, 'HH:mm').format('h A');
+    const formattedTimeClose = moment(_timeClose.value, 'HH:mm').format('h A');
+    dispatch(editSelectedAddress(props.selectedEditEvent, _streetAddress.value, _city.value, _addressState.value, _zipcode.value, formattedDate, formattedTimeOpen, formattedTimeClose));
   };
 
   function handleDeleteAddressSubmission(event) {
