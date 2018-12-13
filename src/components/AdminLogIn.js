@@ -1,24 +1,19 @@
 import React from 'react';
-import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router';
 import '../assets/styles/AdminLogIn.scss';
+import { handleLogin, getCurrentUser } from '../actions';
 
-class AdminLogIn extends React.Component{
-
-  handleLogin = () => {
-    this.props.firebase.auth().signInWithEmailAndPassword(this.email.value, this.password.value).then(console.log('login')).catch(function(error) {
-      alert('nope');
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
-    });
-  }
+class AdminLogIn extends React.Component {
 
   render() {
+    if(getCurrentUser()) {
+      return (<div><Redirect to='/admin' /></div>)
+    }
     return(
       <div className="log-in-styles">
       <div>
-          <form onSubmit={this.handleLogin}>
+          <form onSubmit={() => {handleLogin(this.email.value, this.password.value)}}>
             <p>Sign into your account.</p>
             <input className="input"
               type='text'

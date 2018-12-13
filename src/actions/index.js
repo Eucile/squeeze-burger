@@ -4,8 +4,9 @@ import Firebase from 'firebase';
 const { firebaseConfig } = constants;
 
 /*eslint-disable */
-firebase.initializeApp(firebaseConfig);
-const addresses = firebase.database().ref('addresses');
+const fb = firebase;
+fb.initializeApp(firebaseConfig);
+const addresses = fb.database().ref('addresses');
 /*eslint-enable */
 
 export function fetchAdminInput(streetAddress, city, addressState, zipcode, date, timeOpen, timeClose) {
@@ -88,6 +89,21 @@ function receiveAddress(addressFromFirebase) {
   }
 };
 
+export function handleLogin(email, password)  {
+  fb.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    alert('something went wrong, try again');
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });
+}
+
+export function getCurrentUser  ()  {
+  return fb.auth().currentUser;
+}
+
+export function handleLogout ()  {
+  return fb.auth().signOut().then(window.location = '/');
+}
 function deleteAddress(deleteAddressId) {
   console.log(deleteAddressId);
   return {

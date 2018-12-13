@@ -5,6 +5,7 @@ import 'typeface-montserrat';
 import { createStore, applyMiddleware } from 'redux';
 import middlewareLogger from './middleware/middleware-logger';
 import thunkMiddleware from 'redux-thunk';
+import firebase from 'firebase';
 import { Provider } from 'react-redux';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';

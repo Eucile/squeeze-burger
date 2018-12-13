@@ -27,46 +27,48 @@ function AddForm(props) {
 
   return(
     <div className="add-form">
-    <div>
       <form>
-        <input
-          placeholder='Street Address'
-          type='text'
-          ref={(input) => {_streetAddress = input;}}
-        />
-        <input
-          placeholder='City'
-          type='text'
-          ref={(input) => {_city = input;}}
-        />
-        <input
-          placeholder='State'
-          type='text'
-          ref={(input) => {_addressState = input;}}
-        />
-        <input
-          placeholder='Zipcode'
-          type='text'
-          ref={(input) => {_zipcode = input;}}
-        />
-        <input
-          placeholder='Date'
-          type='date'
-          ref={(input) => {_date = input;}}
-        />
-        <input
-          placeholder='Time Open'
-          type='time'
-          ref={(input) => {_timeOpen = input;}}
-        />
-        <input
-          placeholder='Time Close'
-          type='time'
-          ref={(input) => {_timeClose = input;}}
-        />
-        <button onClick={handleAddressSubmission}>Submit</button>
+        <div>
+          <input
+            placeholder='Street Address'
+            type='text'
+            ref={(input) => {_streetAddress = input;}}
+          />
+          <input
+            placeholder='City'
+            type='text'
+            ref={(input) => {_city = input;}}
+          />
+          <input
+            placeholder='State'
+            type='text'
+            ref={(input) => {_addressState = input;}}
+          />
+          <input
+            placeholder='Zipcode'
+            type='text'
+            ref={(input) => {_zipcode = input;}}
+          />
+          </div>
+          <div>
+          <input
+            placeholder='Date'
+            type='date'
+            ref={(input) => {_date = input;}}
+          />
+          <input
+            placeholder='Time Open'
+            type='time'
+            ref={(input) => {_timeOpen = input;}}
+          />
+          <input
+            placeholder='Time Close'
+            type='time'
+            ref={(input) => {_timeClose = input;}}
+          />
+          <button className="add-button" onClick={handleAddressSubmission}>Add</button>
+        </div>
       </form>
-      </div>
     </div>
   );
 }
