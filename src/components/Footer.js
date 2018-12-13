@@ -10,7 +10,9 @@ function Footer(){
     <div className="FooterStyles">
       <ul className="icon-list">
         <li className="icon-list"><img src={fbIcon}/></li>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/squeezeburgertruck">
         <li className="icon-list"><img src={instaIcon}/></li>
+        </a>
         <li className="icon-list"><img src={twitterIcon}/></li>
         <li className="icon-list"><img src={googleIcon}/></li>
       </ul>
