@@ -1,19 +1,8 @@
-// .add-form {
-//   display: flex;
-//   justify-content: space-around;
-//   flex-direction: column;
-//   justify-content: center;
-//   width: 80%;
-//   padding-top: 100px;
-//   input {
-//     width: 150px;
-//     font-size: 15px;
-//   }
-//   .add-button {
-//     width: 170px;
-//     font-size: 15px;
-//     padding: 13px 65px;
-//     padding: 10px 45px;
-//     border-radius: 1px;
-//   }
-// }
+.add-form {
+  display: flex;
+  flex-direction: column;
+  input {
+    width: 150px;
+    font-size: 15px;
+  }
+}
