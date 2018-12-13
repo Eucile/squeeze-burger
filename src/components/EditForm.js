@@ -40,7 +40,16 @@ function EditForm(props) {
 
   return(
     <div className="edit-form">
-      <form>
+      <style>{`
+        .form {
+          margin-top: 125px;
+          width: 350px;
+          padding: 1em;
+          border: 1px solid #CCC;
+          border-radius: 1em;
+        }
+      `}</style>
+      <form className="form">
         <input
           placeholder='Street Address'
           type='text'
@@ -73,8 +82,6 @@ function EditForm(props) {
           value={props.zipcodeInput}
           ref={(input) => {_zipcode = input;}}
         />
-        <button className="edit-button" onClick={handleEditAddressSubmission}>Submit</button>
-        <button className="edit-button" onClick={handleDeleteAddressSubmission}>Delete</button>
         <input
           placeholder='Date'
           type='date'
