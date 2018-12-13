@@ -1,14 +1,13 @@
 .FooterStyles {
-  background: rgba(0, 0, 0, .9);
+  background: black;
   color: white;
-  position: fixed;
-  bottom: 0;
-  z-index: 1000;
+  position: absolute;
+  bottom: 100;
   display: flex;
   font-size: 16px;
   justify-content: space-around;
   width: 100%;
-  padding: 1em auto;
+  padding: 1.5em auto;
   .icon-list {
     display: flex;
     flex-direction: row;
@@ -17,8 +16,8 @@
     list-style: none;
     padding: 0 30px;
     img {
-      width: 70%;
-      height: 90%;
+      width: 80%;
+      height: 100%;
     }
     &:hover {
       opacity: .7;

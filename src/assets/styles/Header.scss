@@ -1,3 +1,13 @@
+a:hover {
+  color: #DA6727;
+  transition: 0.7s;
+}
+a {
+  text-decoration: none;
+  color: white;
+  cursor: e-resize;
+}
+
 .HeaderStyles {
   background: black;
   color: white;
@@ -28,7 +38,6 @@
 .header-content {
   margin: 0 auto;
 }
-
 .booking-button {
   background: #DA6727;
   padding: 10px 30px;
