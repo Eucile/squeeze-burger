@@ -89,7 +89,6 @@ function receiveAddress(addressFromFirebase) {
   }
 };
 
-<<<<<<< HEAD
 export function handleLogin(email, password)  {
   fb.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
     alert('something went wrong, try again');
@@ -105,7 +104,6 @@ export function getCurrentUser  ()  {
 export function handleLogout ()  {
   return fb.auth().signOut().then(window.location = '/');
 }
-=======
 function deleteAddress(deleteAddressId) {
   console.log(deleteAddressId);
   return {
@@ -113,4 +111,3 @@ function deleteAddress(deleteAddressId) {
     deleteAddressId: deleteAddressId
   }
 };
->>>>>>> master

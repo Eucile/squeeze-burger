@@ -73,10 +73,8 @@ function EditForm(props) {
           value={props.zipcodeInput}
           ref={(input) => {_zipcode = input;}}
         />
-<<<<<<< HEAD
         <button className="edit-button" onClick={handleEditAddressSubmission}>Submit</button>
         <button className="edit-button" onClick={handleDeleteAddressSubmission}>Delete</button>
-=======
         <input
           placeholder='Date'
           type='date'
@@ -103,7 +101,6 @@ function EditForm(props) {
         />
         <button onClick={handleEditAddressSubmission}>Submit</button>
         <button onClick={handleDeleteAddressSubmission}>Delete</button>
->>>>>>> master
       </form>
     </div>
   );
