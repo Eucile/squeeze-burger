@@ -34,6 +34,9 @@ function Event({ streetAddress, addressState, city, zipcode, date, timeOpen, tim
           font-size: 1.25rem;
           color: #49505e;
         }
+        .googleMapBox {
+          height: 100px;    
+        }
       `}</style>
       <div className="dateAndTime">
         <p>{date}</p>

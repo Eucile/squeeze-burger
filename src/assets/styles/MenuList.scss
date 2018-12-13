@@ -6,6 +6,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-size: cover;
   display: table;
   background-attachment: fixed;
@@ -20,7 +21,6 @@
     img {
       max-width: 100%;
       padding-bottom: 5px;
-      border-bottom: 3px solid #DA6727;
     }
     img {
       max-width: 100%;
@@ -31,20 +31,14 @@
   display: flex;
   background: white;
   border-radius: 1px;
-  padding-left: 6em;
-  padding-right: 6em;
+  padding: 2em 6em;
+  padding-bottom: 6em;
   justify-content: center;
   width: 60%;
   flex-direction: column;
-  margin: 0px auto;
-  padding-bottom: 60px;
-  padding-left: 7em;
-  padding-right: 7em;
   justify-content: center;
   width: 50%;
-  flex-direction: column;
   margin: 0 auto;
-  padding-bottom: 2em;
   .menu-title-flex {
     display: flex;
     justify-content: space-between;
@@ -58,9 +52,16 @@
   justify-content: center;
   padding-top: 3em;
   padding-bottom: 3em;
+  .banner-underline {
+    width: 450px;
+    display: flex;
+    border-bottom: .5px solid white;
+  }
   img {
+    padding-bottom: 2em;
     width: 119px;
     height: 68px;
+    margin: 0 auto;
   }
 }
 .combo {

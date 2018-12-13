@@ -7,7 +7,9 @@ function MenuList(){
   return (
     <div className="slide2">
     <div className="menu-banner">
-      <img src={menu}/>
+      <div className="banner-underline">
+        <img src={menu}/>
+      </div>
     </div>
     <div className="menu-container">
       <div className="main-menu">
@@ -41,11 +43,6 @@ function MenuList(){
             <p className="combo"><em>(sides included as combo with your main order)</em></p>
           </div>
         </div>
-      </div>
-      <div className="menu-bottom">
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
       </div>
     </div>
   );

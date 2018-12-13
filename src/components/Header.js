@@ -9,7 +9,7 @@ function getButton() {
   if(getCurrentUser()){
     return <li onClick={handleLogout} className='logout-button' type='submit'>log out</li>
   } else {
-    return <Link to="/login" style={{ color: '#FFF', textDecoration: 'none' }}>log in</Link>
+    return <Link to="/login">log in</Link>
   }
 }
 
@@ -18,7 +18,7 @@ function Header(){
     <div className="HeaderStyles">
         <ul className="nav-list">
           <li className="nav-list">
-            <Link to="/"style={{ color: '#FFF', textDecoration: 'none' }}>home</Link>
+            <Link to="/">home</Link>
           </li>
           <li className="nav-list">menu</li>
           <li className="nav-list">locations</li>
