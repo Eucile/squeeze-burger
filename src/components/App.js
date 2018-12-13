@@ -4,12 +4,15 @@ import Admin from './Admin';
 import Body from './Body';
 import Booking from './Booking';
 import Footer from './Footer';
+import firebase from 'firebase';
 import { connect } from 'react-redux';
+import constants from './../constants';
 import PropTypes from 'prop-types';
 import * as actions from './../actions';
 import { Switch, Route } from 'react-router-dom';
 import AddForm from './AddForm';
 import AdminLogIn from './AdminLogIn';
+
 
 class App extends Component {
   constructor(props) {
@@ -37,13 +40,9 @@ class App extends Component {
               />
             }
           />
-          <Route
-          exact path='/login'
-          render={ () =>
-            <AdminLogIn
-            />
-          }
-          />
+          <Route path='/login'
+          render={ () => <AdminLogIn firebase={firebase} /> } />
+
           <Route
             exact path='/admin'
             render={ () =>

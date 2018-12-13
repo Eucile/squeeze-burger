@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import '../assets/styles/Header.scss';
 import whiteLogo from '../assets/logos/squeeze_logo_white.png';
 import burgerMenu from '../assets/logos/orange_burger_menu.png';
+import { handleLogout, getCurrentUser } from '../actions';
+
+function getButton() {
+  if(getCurrentUser()){
+    return <button onClick={handleLogout} className='login-button' type='submit'>log out</button>
+  } else {
+    return <Link to="/login" style={{ color: '#FFF', textDecoration: 'none' }}>log in</Link>
+  }
+}
 
 function Header(){
   return (
@@ -12,7 +21,7 @@ function Header(){
           <li className="nav-list">menu</li>
           <li className="nav-list">locations</li>
           <li className="nav-list">story</li>
-          <Link to="/login" style={{ color: '#FFF', textDecoration: 'none' }}><li className="nav-list">log in</li></Link>
+          <li>{getButton()}</li>
         </ul>
         <div></div>
         <div>
