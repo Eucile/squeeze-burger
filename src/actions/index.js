@@ -68,17 +68,17 @@ export function watchFirebaseEditAddressesRef() {
       });
       dispatch(receiveAddress(newAddress));
     });
+
   }
 };
 
 export function watchFirebaseDeleteAddressesRef() {
   return function(dispatch) {
     addresses.on('child_removed', data => {
-      const newAddress = Object.assign({}, data.val(), {
-        id: data.getKey()
-      });
-      dispatch(receiveAddress(newAddress));
+      console.log("DELETE");
+      dispatch(deleteAddress(data.getKey()));
     });
+    console.log("DELETE");
   }
 };
 
@@ -89,6 +89,7 @@ function receiveAddress(addressFromFirebase) {
   }
 };
 
+<<<<<<< HEAD
 export function handleLogin(email, password)  {
   fb.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
     alert('something went wrong, try again');
@@ -104,3 +105,12 @@ export function getCurrentUser  ()  {
 export function handleLogout ()  {
   return fb.auth().signOut().then(window.location = '/');
 }
+=======
+function deleteAddress(deleteAddressId) {
+  console.log(deleteAddressId);
+  return {
+    type: 'DELETE_ADDRESS',
+    deleteAddressId: deleteAddressId
+  }
+};
+>>>>>>> master
